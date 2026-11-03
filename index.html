@@ -70,7 +70,7 @@
     .button.solid:hover { background: var(--ink); border-color: var(--ink); }
     .portrait { position: relative; width: min(100%, 370px); justify-self: center; padding: 0 16px 16px 0; }
     .portrait::before { position: absolute; content: ""; inset: 20px 0 0 20px; background: var(--orange); }
-    .portrait img { position: relative; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; filter: saturate(.82); background: var(--pale-green); }
+    .portrait img { position: relative; display: block; width: min(100%, 302px); height: auto; margin-inline: auto; aspect-ratio: auto; filter: saturate(.82); background: var(--pale-green); }
     .portrait-note { position: absolute; right: -15px; bottom: 34px; padding: 10px 14px; background: var(--paper); border: 1px solid var(--line); font: 12px var(--mono); transform: rotate(-3deg); }
     .quick-facts { border-block: 1px solid var(--line); background: rgba(225, 233, 223, .62); }
     .facts-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
@@ -188,7 +188,7 @@
           </div>
         </div>
         <div class="portrait reveal delay">
-          <img src="profile_pic.jpeg" alt="Portrait of Atharva Dhorje" width="640" height="800">
+          <img src="profile_pic.jpeg" alt="Portrait of Atharva Dhorje" width="302" height="346">
           <div class="portrait-note">Pune, Maharashtra · India</div>
         </div>
       </div>
