@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f0e9">
+  <meta name="description" content="Atharva Dhorje is an AI/ML postgraduate and developer working across generative AI, NLP, and data products.">
+  <meta property="og:title" content="Atharva Dhorje | AI & Machine Learning">
+  <meta property="og:description" content="Selected AI projects, research, and experience by Atharva Dhorje.">
+  <meta property="og:type" content="website">
+  <title>Atharva Dhorje — AI & Machine Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f3f0e9;
+      --ink: #1d2723;
+      --muted: #64716a;
+      --line: #d7d9d0;
+      --green: #245c48;
+      --orange: #e56743;
+      --pale-green: #e1e9df;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "DM Sans", sans-serif;
+      --mono: "DM Mono", monospace;
+      --page: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body {
+      margin: 0;
+      background-color: var(--paper);
+      background-image: radial-gradient(#c9cec4 0.65px, transparent 0.65px);
+      background-size: 15px 15px;
+      color: var(--ink);
+      font: 16px/1.65 var(--sans);
+    }
+    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    a:hover { color: var(--orange); }
+    img { display: block; max-width: 100%; }
+    .wrap { width: min(var(--page), calc(100% - 48px)); margin-inline: auto; }
+    .topbar {
+      position: sticky; inset-block-start: 0; z-index: 3;
+      border-bottom: 1px solid rgba(29, 39, 35, .14);
+      background: rgba(243, 240, 233, .94); backdrop-filter: blur(12px);
+    }
+    .nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .wordmark { font: 800 17px/1 var(--sans); text-decoration: none; letter-spacing: 0; }
+    .wordmark span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; padding: 0; margin: 0; }
+    .nav-links a { color: var(--muted); font-size: 14px; text-decoration: none; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta { color: var(--green) !important; font-weight: 700; }
+    .hero { padding: 82px 0 74px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .75fr); gap: 70px; align-items: center; }
+    .kicker, .section-kicker, .eyebrow { color: var(--green); font: 500 12px/1.4 var(--mono); letter-spacing: 0; text-transform: uppercase; }
+    .kicker { display: flex; align-items: center; gap: 10px; }
+    .kicker::before { content: ""; width: 26px; height: 1px; background: var(--orange); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 700px; margin: 20px 0 18px; font: 600 clamp(48px, 7vw, 82px)/.99 var(--serif); letter-spacing: 0; }
+    h1 em { color: var(--green); font-weight: 400; }
+    .hero-copy { max-width: 610px; margin-bottom: 30px; color: var(--muted); font-size: 18px; }
+    .hero-copy strong { color: var(--ink); font-weight: 600; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 18px; border: 1px solid var(--green); color: var(--green); font-size: 14px; font-weight: 700; text-decoration: none; transition: background .2s, color .2s, transform .2s; }
+    .button:hover { transform: translateY(-2px); background: var(--green); color: #fff; }
+    .button.solid { background: var(--green); color: #fff; }
+    .button.solid:hover { background: var(--ink); border-color: var(--ink); }
+    .portrait { position: relative; width: min(100%, 370px); justify-self: center; padding: 0 16px 16px 0; }
+    .portrait::before { position: absolute; content: ""; inset: 20px 0 0 20px; background: var(--orange); }
+    .portrait img { position: relative; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; filter: saturate(.82); background: var(--pale-green); }
+    .portrait-note { position: absolute; right: -15px; bottom: 34px; padding: 10px 14px; background: var(--paper); border: 1px solid var(--line); font: 12px var(--mono); transform: rotate(-3deg); }
+    .quick-facts { border-block: 1px solid var(--line); background: rgba(225, 233, 223, .62); }
+    .facts-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .fact { min-height: 105px; padding: 21px 24px; border-right: 1px solid var(--line); }
+    .fact:first-child { padding-left: 0; }
+    .fact:last-child { border-right: 0; }
+    .fact strong { display: block; margin-bottom: 5px; font: 600 19px/1.3 var(--serif); }
+    .fact span { color: var(--muted); font-size: 13px; }
+    section { padding: 88px 0; }
+    .section-heading { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: start; margin-bottom: 38px; }
+    .section-kicker { padding-top: 10px; }
+    h2 { margin: 0; font: 600 clamp(34px, 4vw, 48px)/1.08 var(--serif); letter-spacing: 0; }
+    .section-lead { max-width: 660px; margin: 14px 0 0; color: var(--muted); }
+    .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 70px; }
+    .about-copy p { margin-bottom: 16px; color: var(--muted); }
+    .about-copy strong { color: var(--ink); }
+    .details { border-top: 1px solid var(--line); }
+    .detail { display: grid; grid-template-columns: 112px 1fr; gap: 15px; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .detail dt { color: var(--muted); }
+    .detail dd { margin: 0; font-weight: 600; }
+    .work { background: #e8ebe4; }
+    .work-list { border-top: 1px solid #cbd1c7; }
+    .work-item { display: grid; grid-template-columns: 170px 1fr; gap: 36px; padding: 30px 0; border-bottom: 1px solid #cbd1c7; }
+    .work-date { color: var(--muted); font: 12px/1.7 var(--mono); }
+    .work-item h3 { margin: 0 0 2px; font: 600 24px/1.3 var(--serif); }
+    .work-place { color: var(--green); font-size: 14px; font-weight: 700; }
+    .work-item ul { margin: 14px 0 0; padding-left: 19px; color: var(--muted); }
+    .work-item li { padding: 3px 0; }
+    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .project { min-height: 265px; padding: 26px 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; }
+    .project-top { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin-bottom: 19px; }
+    .project-number { color: var(--orange); font: 12px var(--mono); }
+    .project h3 { margin: 0 0 10px; font: 600 25px/1.2 var(--serif); }
+    .project p { margin-bottom: 19px; color: var(--muted); font-size: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; }
+    .tag { padding: 4px 9px; border: 1px solid var(--line); color: var(--green); font: 11px var(--mono); }
+    .skills { padding: 0 0 88px; }
+    .skill-line { display: grid; grid-template-columns: 200px 1fr; gap: 28px; padding: 16px 0; border-top: 1px solid var(--line); }
+    .skill-line:last-child { border-bottom: 1px solid var(--line); }
+    .skill-line strong { font: 600 17px var(--serif); }
+    .skill-line span { color: var(--muted); font-size: 14px; }
+    .credentials { background: var(--green); color: #f3f0e9; }
+    .credentials .section-kicker { color: #d8aa8a; }
+    .credentials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+    .credential-group h3 { margin: 0 0 18px; font: 600 25px var(--serif); }
+    .credential { padding: 15px 0; border-top: 1px solid rgba(243, 240, 233, .25); }
+    .credential strong { display: block; font-size: 14px; }
+    .credential span { color: #c3d1c7; font-size: 13px; }
+    .contact { padding: 86px 0 78px; background: var(--orange); }
+    .contact .wrap { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; }
+    .contact .section-kicker { color: #442d27; }
+    .contact h2 { max-width: 650px; margin: 15px 0; font-size: clamp(42px, 6vw, 68px); }
+    .contact p { max-width: 560px; margin: 0; color: #442d27; }
+    .contact .button { border-color: var(--ink); color: var(--ink); white-space: nowrap; }
+    .contact .button:hover { background: var(--ink); color: #fff; }
+    footer { padding: 21px 0; background: var(--ink); color: #c4cec7; font-size: 12px; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 20px; }
+    footer a { color: #c4cec7; }
+    .reveal { animation: rise .7s both; }
+    .delay { animation-delay: .12s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 760px) {
+      .wrap { width: min(var(--page), calc(100% - 36px)); }
+      .nav { min-height: 62px; }
+      .nav-links { gap: 15px; }
+      .nav-links li:nth-child(-n+2) { display: none; }
+      .hero { padding: 58px 0 54px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 38px; }
+      .hero-copy { font-size: 16px; }
+      .portrait { width: min(72%, 300px); }
+      .facts-grid { grid-template-columns: 1fr; }
+      .fact, .fact:first-child { min-height: 0; padding: 15px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .fact:last-child { border-bottom: 0; }
+      section { padding: 65px 0; }
+      .section-heading { grid-template-columns: 1fr; gap: 9px; margin-bottom: 28px; }
+      .about-grid { grid-template-columns: 1fr; gap: 30px; }
+      .work-item { grid-template-columns: 1fr; gap: 9px; }
+      .project-grid, .credentials-grid { grid-template-columns: 1fr; }
+      .project { min-height: 0; }
+      .skills { padding-bottom: 65px; }
+      .skill-line { grid-template-columns: 1fr; gap: 6px; }
+      .credentials-grid { gap: 34px; }
+      .contact .wrap { grid-template-columns: 1fr; gap: 25px; }
+      footer .wrap { flex-direction: column; gap: 7px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="wordmark" href="#home">Atharva<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a class="nav-cta" href="#contact">Contact ↗</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="reveal">
+          <div class="kicker">AI · Machine Learning · Applied Research</div>
+          <h1>Curious by nature.<br><em>Building with intelligence.</em></h1>
+          <p class="hero-copy">I’m Atharva Dhorje, a computer engineer pursuing an <strong>MTech in AI/ML</strong>. I work on practical AI products, from language-model applications to data tools that make complex information easier to use.</p>
+          <div class="actions">
+            <a class="button solid" href="#projects">Explore selected work <span aria-hidden="true">↘</span></a>
+            <a class="button" href="https://www.linkedin.com/in/atharvadhorje/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="portrait reveal delay">
+          <img src="profile_pic.jpeg" alt="Portrait of Atharva Dhorje" width="640" height="800">
+          <div class="portrait-note">Pune, Maharashtra · India</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="quick-facts" aria-label="At a glance">
+      <div class="wrap facts-grid">
+        <div class="fact"><strong>Generative AI</strong><span>LLMs, retrieval, and agent workflows</span></div>
+        <div class="fact"><strong>Computer Engineering</strong><span>Undergraduate degree, 2022–2025</span></div>
+        <div class="fact"><strong>AI/ML Postgraduate</strong><span>Symbiosis Institute of Technology, 2025–2027</span></div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-heading"><div class="section-kicker">01 / About</div><div><h2>Turning technical ideas into useful things.</h2><p class="section-lead">A foundation in engineering, with a growing focus on language technologies and human-centered AI.</p></div></div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>I’m an AI developer and computer engineer based in Pune, currently pursuing an MTech in AI/ML at Symbiosis Institute of Technology. My work spans <strong>generative AI, large language models, retrieval-augmented generation, and NLP</strong>.</p>
+            <p>I enjoy the full problem-solving loop: understanding the need, working with the data, building the system, and making the result approachable. Along the way, I’ve worked with Python, APIs, machine-learning workflows, and business intelligence.</p>
+            <p>My engineering background keeps me grounded in fundamentals like data structures, object-oriented programming, debugging, and integration.</p>
+          </div>
+          <dl class="details">
+            <div class="detail"><dt>Based in</dt><dd>Pune, Maharashtra</dd></div>
+            <div class="detail"><dt>Studying</dt><dd>MTech, Artificial Intelligence / Machine Learning</dd></div>
+            <div class="detail"><dt>Interested in</dt><dd>Applied AI, GenAI, NLP, data products</dd></div>
+            <div class="detail"><dt>Elsewhere</dt><dd><a href="https://github.com/AtharvaDhorje" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://scholar.google.com/citations?user=A6QY1aQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="experience">
+      <div class="wrap">
+        <div class="section-heading"><div class="section-kicker">02 / Experience</div><div><h2>Learning by building.</h2><p class="section-lead">Internship experience across AI applications, NLP, and retrieval workflows.</p></div></div>
+        <div class="work-list">
+          <article class="work-item">
+            <div class="work-date">JUN 2026 — AUG 2026<br>REMOTE</div>
+            <div><h3>Artificial Intelligence Intern</h3><div class="work-place">UNLOX®</div><ul><li>Built an AI resume analyzer with Python, NLP, Gemini, and Streamlit, covering 10+ job roles with recommendations and skill-development roadmaps.</li><li>Developed a citation-grounded RAG chatbot using FAISS, Sentence Transformers, cross-encoder reranking, LangChain, and Gemini 2.5 Flash.</li></ul></div>
+          </article>
+          <article class="work-item">
+            <div class="work-date">SEP 2025 — JAN 2026<br>REMOTE</div>
+            <div><h3>AI Intern</h3><div class="work-place">LaunchED Global</div><ul><li>Created a fake-review detection pipeline for 40,432 reviews, reporting 87.02% accuracy, 86.93% F1-score, and 0.9453 ROC-AUC.</li><li>Contributed to RAG, FAISS, and multi-agent AI workflows, including retrieval and API integration.</li></ul></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-heading"><div class="section-kicker">03 / Selected Work</div><div><h2>Ideas, made tangible.</h2><p class="section-lead">A selection of AI and analytics projects, from personal planning to large-scale reporting.</p></div></div>
+        <div class="project-grid">
+          <article class="project"><div class="project-top"><span class="project-number">PROJECT 01</span><span aria-hidden="true">↗</span></div><h3>AI Travel Planner</h3><p>A personalized itinerary planner that considers destination, accommodation, activities, and budget. Prompt design and contextual preference analysis power day-by-day plans, with around 70% less manual planning effort.</p><div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Gemini API</span></div></article>
+          <article class="project"><div class="project-top"><span class="project-number">PROJECT 02</span><span aria-hidden="true">↗</span></div><h3>Context-Aware News Translation</h3><p>A multilingual NLP application combining transformer-based translation and topic-aware summarization to preserve context and reduce reading time.</p><div class="tags"><span class="tag">NLP</span><span class="tag">Transformers</span><span class="tag">Python</span></div></article>
+          <article class="project"><div class="project-top"><span class="project-number">PROJECT 03</span><span aria-hidden="true">↗</span></div><h3>Insurance Data Analytics</h3><p>Interactive Power BI reporting across 26K+ insurance policies and 791K+ premium records, tracking revenue, claims, renewals, and customer segments.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Analytics</span></div></article>
+          <article class="project"><div class="project-top"><span class="project-number">PROJECT 04</span><span aria-hidden="true">↗</span></div><h3>Fake Review Detection</h3><p>A classification pipeline combining TF-IDF with linguistic and sentiment features to identify deceptive reviews, evaluated across 40,432 examples.</p><div class="tags"><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Gradient Boosting</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" aria-label="Technical toolkit">
+      <div class="wrap">
+        <div class="section-heading"><div class="section-kicker">04 / Toolkit</div><div><h2>Tools I reach for.</h2></div></div>
+        <div class="skill-line"><strong>Languages</strong><span>Python · SQL · C# · JavaScript</span></div>
+        <div class="skill-line"><strong>AI & machine learning</strong><span>LLMs · RAG · Agentic AI · NLP · Scikit-learn · TensorFlow · PyTorch · LangChain · Transformers</span></div>
+        <div class="skill-line"><strong>Building & data</strong><span>FastAPI · REST APIs · Gemini API · FAISS · Azure · Docker · MLflow · Streamlit · Power BI · Git</span></div>
+      </div>
+    </section>
+
+    <section class="credentials" id="research">
+      <div class="wrap">
+        <div class="section-heading"><div class="section-kicker">05 / Research & Learning</div><div><h2>Research curiosity, backed by practice.</h2></div></div>
+        <div class="credentials-grid">
+          <div class="credential-group"><h3>Publication</h3><div class="credential"><strong>Optimizing Agricultural Labour: An Examination of On-Demand Workforce Solutions for Seasonal Demands</strong><span>International Journal of Scientific Research in Science and Technology · April 2025 · <a href="https://doi.org/10.32628/IJSRST251222693" target="_blank" rel="noopener noreferrer">DOI ↗</a></span></div></div>
+          <div class="credential-group"><h3>Certifications</h3><div class="credential"><strong>OCI 2025 Certified Generative AI Professional</strong><span>Oracle · October 2025</span></div><div class="credential"><strong>OCI 2025 Certified Foundations Associate</strong><span>Oracle · October 2025</span></div><div class="credential"><strong>Problem Solving (Intermediate)</strong><span>HackerRank · September 2025</span></div><div class="credential"><strong>Prompt Design in Vertex AI Skill Badge</strong><span>Google · May 2024</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap"><div><div class="section-kicker">06 / Contact</div><h2>Have a thoughtful problem to solve?</h2><p>I’m open to conversations about AI engineering, collaborations, and practical applications of generative AI and data.</p></div><a class="button" href="mailto:atharvadhorje14@gmail.com">Email Atharva <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><span>© <span id="year"></span> Atharva Dhorje</span><span><a href="https://www.linkedin.com/in/atharvadhorje/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://github.com/AtharvaDhorje" target="_blank" rel="noopener noreferrer">GitHub</a></span></div></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
