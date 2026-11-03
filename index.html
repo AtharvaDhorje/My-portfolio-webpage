@@ -1,279 +1,2041 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f3f0e9">
-  <meta name="description" content="Atharva Dhorje is an AI/ML postgraduate and developer working across generative AI, NLP, and data products.">
-  <meta property="og:title" content="Atharva Dhorje | AI & Machine Learning">
-  <meta property="og:description" content="Selected AI projects, research, and experience by Atharva Dhorje.">
+  <meta name="description" content="Atharva Amit Dhorje — AI & Machine Learning Engineer (M.Tech AI/ML at Symbiosis Institute of Technology). Building production-grade RAG pipelines, multi-agent systems, explainable ML, and MLOps workflows. Open to AI/ML internships and full-time engineering roles.">
+  <meta name="keywords" content="Atharva Dhorje, Atharva Amit Dhorje, AI Engineer, Machine Learning Engineer, Generative AI, RAG, LangChain, FAISS, NLP, MLOps, Symbiosis Institute of Technology, Pune, Portfolio">
+  <meta name="author" content="Atharva Amit Dhorje">
+  <meta property="og:title" content="Atharva Dhorje | AI & Machine Learning Engineer Portfolio">
+  <meta property="og:description" content="M.Tech AI/ML Engineer building citation-grounded RAG systems, multi-agent workflows, explainable fraud & review detection, and deep learning pipelines.">
   <meta property="og:type" content="website">
-  <title>Atharva Dhorje — AI & Machine Learning</title>
+  <meta property="og:image" content="profile_pic.jpeg">
+  <title>Atharva Dhorje — AI & Machine Learning Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Atharva Amit Dhorje",
+    "jobTitle": "AI & Machine Learning Engineer",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Symbiosis Institute of Technology, Pune"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "email": "mailto:atharvadhorje14@gmail.com",
+    "telephone": "+917757901159",
+    "sameAs": [
+      "https://www.linkedin.com/in/atharvadhorje/",
+      "https://github.com/AtharvaDhorje",
+      "https://scholar.google.com/citations?user=A6QY1aQAAAAJ&hl=en"
+    ]
+  }
+  </script>
   <style>
     :root {
       color-scheme: light;
-      --paper: #f3f0e9;
-      --ink: #1d2723;
-      --muted: #64716a;
-      --line: #d7d9d0;
-      --green: #245c48;
-      --orange: #e56743;
-      --pale-green: #e1e9df;
-      --serif: Georgia, "Times New Roman", serif;
-      --sans: "DM Sans", sans-serif;
+      --paper: #f4f1ea;
+      --paper-elevated: #faf8f4;
+      --paper-alt: #e8ece5;
+      --ink: #17211d;
+      --ink-soft: #2c3a34;
+      --muted: #58665f;
+      --line: #d3d7ce;
+      --line-strong: #b8bfb2;
+      --green: #1e5641;
+      --green-light: #dfeae2;
+      --orange: #df5b35;
+      --orange-soft: rgba(223, 91, 53, 0.12);
+      --dot: #c7cdc2;
+      --topbar-bg: rgba(244, 241, 234, 0.92);
+      --shadow: 0 14px 34px -12px rgba(23, 33, 29, 0.08);
+      --serif: "Newsreader", Georgia, "Times New Roman", serif;
+      --sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
       --mono: "DM Mono", monospace;
-      --page: 1160px;
+      --page: 1200px;
     }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --paper: #111715;
+      --paper-elevated: #17201d;
+      --paper-alt: #18231f;
+      --ink: #eef2ee;
+      --ink-soft: #d0dbd5;
+      --muted: #93a39b;
+      --line: #26352f;
+      --line-strong: #374b43;
+      --green: #52b788;
+      --green-light: rgba(82, 183, 136, 0.14);
+      --orange: #f0714b;
+      --orange-soft: rgba(240, 113, 75, 0.15);
+      --dot: #23302b;
+      --topbar-bg: rgba(17, 23, 21, 0.9);
+      --shadow: 0 18px 38px -12px rgba(0, 0, 0, 0.45);
+    }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 84px; }
     body {
       margin: 0;
       background-color: var(--paper);
-      background-image: radial-gradient(#c9cec4 0.65px, transparent 0.65px);
-      background-size: 15px 15px;
+      background-image: radial-gradient(var(--dot) 0.75px, transparent 0.75px);
+      background-size: 16px 16px;
       color: var(--ink);
       font: 16px/1.65 var(--sans);
+      transition: background-color 0.25s ease, color 0.25s ease;
     }
-    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 4px; transition: color 0.18s ease; }
     a:hover { color: var(--orange); }
     img { display: block; max-width: 100%; }
+    h1, h2, h3, h4, p { margin-top: 0; }
+
     .wrap { width: min(var(--page), calc(100% - 48px)); margin-inline: auto; }
+
+    /* Top Navigation */
     .topbar {
-      position: sticky; inset-block-start: 0; z-index: 3;
-      border-bottom: 1px solid rgba(29, 39, 35, .14);
-      background: rgba(243, 240, 233, .94); backdrop-filter: blur(12px);
+      position: sticky;
+      inset-block-start: 0;
+      z-index: 40;
+      border-bottom: 1px solid var(--line);
+      background: var(--topbar-bg);
+      backdrop-filter: blur(14px);
     }
-    .nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .wordmark { font: 800 17px/1 var(--sans); text-decoration: none; letter-spacing: 0; }
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .wordmark {
+      font: 700 18px/1 var(--sans);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
     .wordmark span { color: var(--orange); }
-    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; padding: 0; margin: 0; }
-    .nav-links a { color: var(--muted); font-size: 14px; text-decoration: none; }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-cta { color: var(--green) !important; font-weight: 700; }
-    .hero { padding: 82px 0 74px; overflow: hidden; }
-    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .75fr); gap: 70px; align-items: center; }
-    .kicker, .section-kicker, .eyebrow { color: var(--green); font: 500 12px/1.4 var(--mono); letter-spacing: 0; text-transform: uppercase; }
-    .kicker { display: flex; align-items: center; gap: 10px; }
-    .kicker::before { content: ""; width: 26px; height: 1px; background: var(--orange); }
-    h1, h2, h3, p { margin-top: 0; }
-    h1 { max-width: 700px; margin: 20px 0 18px; font: 600 clamp(48px, 7vw, 82px)/.99 var(--serif); letter-spacing: 0; }
-    h1 em { color: var(--green); font-weight: 400; }
-    .hero-copy { max-width: 610px; margin-bottom: 30px; color: var(--muted); font-size: 18px; }
-    .hero-copy strong { color: var(--ink); font-weight: 600; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 18px; border: 1px solid var(--green); color: var(--green); font-size: 14px; font-weight: 700; text-decoration: none; transition: background .2s, color .2s, transform .2s; }
-    .button:hover { transform: translateY(-2px); background: var(--green); color: #fff; }
-    .button.solid { background: var(--green); color: #fff; }
-    .button.solid:hover { background: var(--ink); border-color: var(--ink); }
-    .portrait { position: relative; width: min(100%, 370px); justify-self: center; padding: 0 16px 16px 0; }
-    .portrait::before { position: absolute; content: ""; inset: 20px 0 0 20px; background: var(--orange); }
-    .portrait img { position: relative; display: block; width: min(100%, 302px); height: auto; margin-inline: auto; aspect-ratio: auto; filter: saturate(.82); background: var(--pale-green); }
-    .portrait-note { position: absolute; right: -15px; bottom: 34px; padding: 10px 14px; background: var(--paper); border: 1px solid var(--line); font: 12px var(--mono); transform: rotate(-3deg); }
-    .quick-facts { border-block: 1px solid var(--line); background: rgba(225, 233, 223, .62); }
-    .facts-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-    .fact { min-height: 105px; padding: 21px 24px; border-right: 1px solid var(--line); }
-    .fact:first-child { padding-left: 0; }
-    .fact:last-child { border-right: 0; }
-    .fact strong { display: block; margin-bottom: 5px; font: 600 19px/1.3 var(--serif); }
-    .fact span { color: var(--muted); font-size: 13px; }
-    section { padding: 88px 0; }
-    .section-heading { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: start; margin-bottom: 38px; }
-    .section-kicker { padding-top: 10px; }
-    h2 { margin: 0; font: 600 clamp(34px, 4vw, 48px)/1.08 var(--serif); letter-spacing: 0; }
-    .section-lead { max-width: 660px; margin: 14px 0 0; color: var(--muted); }
-    .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 70px; }
-    .about-copy p { margin-bottom: 16px; color: var(--muted); }
-    .about-copy strong { color: var(--ink); }
-    .details { border-top: 1px solid var(--line); }
-    .detail { display: grid; grid-template-columns: 112px 1fr; gap: 15px; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
-    .detail dt { color: var(--muted); }
-    .detail dd { margin: 0; font-weight: 600; }
-    .work { background: #e8ebe4; }
-    .work-list { border-top: 1px solid #cbd1c7; }
-    .work-item { display: grid; grid-template-columns: 170px 1fr; gap: 36px; padding: 30px 0; border-bottom: 1px solid #cbd1c7; }
-    .work-date { color: var(--muted); font: 12px/1.7 var(--mono); }
-    .work-item h3 { margin: 0 0 2px; font: 600 24px/1.3 var(--serif); }
-    .work-place { color: var(--green); font-size: 14px; font-weight: 700; }
-    .work-item ul { margin: 14px 0 0; padding-left: 19px; color: var(--muted); }
-    .work-item li { padding: 3px 0; }
-    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-    .project { min-height: 265px; padding: 26px 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; }
-    .project-top { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin-bottom: 19px; }
-    .project-number { color: var(--orange); font: 12px var(--mono); }
-    .project h3 { margin: 0 0 10px; font: 600 25px/1.2 var(--serif); }
-    .project p { margin-bottom: 19px; color: var(--muted); font-size: 14px; }
-    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; }
-    .tag { padding: 4px 9px; border: 1px solid var(--line); color: var(--green); font: 11px var(--mono); }
-    .skills { padding: 0 0 88px; }
-    .skill-line { display: grid; grid-template-columns: 200px 1fr; gap: 28px; padding: 16px 0; border-top: 1px solid var(--line); }
-    .skill-line:last-child { border-bottom: 1px solid var(--line); }
-    .skill-line strong { font: 600 17px var(--serif); }
-    .skill-line span { color: var(--muted); font-size: 14px; }
-    .credentials { background: var(--green); color: #f3f0e9; }
-    .credentials .section-kicker { color: #d8aa8a; }
-    .credentials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
-    .credential-group h3 { margin: 0 0 18px; font: 600 25px var(--serif); }
-    .credential { padding: 15px 0; border-top: 1px solid rgba(243, 240, 233, .25); }
-    .credential strong { display: block; font-size: 14px; }
-    .credential span { color: #c3d1c7; font-size: 13px; }
-    .contact { padding: 86px 0 78px; background: var(--orange); }
-    .contact .wrap { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: end; }
-    .contact .section-kicker { color: #442d27; }
-    .contact h2 { max-width: 650px; margin: 15px 0; font-size: clamp(42px, 6vw, 68px); }
-    .contact p { max-width: 560px; margin: 0; color: #442d27; }
-    .contact .button { border-color: var(--ink); color: var(--ink); white-space: nowrap; }
-    .contact .button:hover { background: var(--ink); color: #fff; }
-    footer { padding: 21px 0; background: var(--ink); color: #c4cec7; font-size: 12px; }
-    footer .wrap { display: flex; justify-content: space-between; gap: 20px; }
-    footer a { color: #c4cec7; }
-    .reveal { animation: rise .7s both; }
-    .delay { animation-delay: .12s; }
-    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-    @media (max-width: 760px) {
-      .wrap { width: min(var(--page), calc(100% - 36px)); }
-      .nav { min-height: 62px; }
-      .nav-links { gap: 15px; }
-      .nav-links li:nth-child(-n+2) { display: none; }
-      .hero { padding: 58px 0 54px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 38px; }
-      .hero-copy { font-size: 16px; }
-      .portrait { width: min(72%, 300px); }
-      .facts-grid { grid-template-columns: 1fr; }
-      .fact, .fact:first-child { min-height: 0; padding: 15px 0; border-right: 0; border-bottom: 1px solid var(--line); }
-      .fact:last-child { border-bottom: 0; }
-      section { padding: 65px 0; }
-      .section-heading { grid-template-columns: 1fr; gap: 9px; margin-bottom: 28px; }
-      .about-grid { grid-template-columns: 1fr; gap: 30px; }
-      .work-item { grid-template-columns: 1fr; gap: 9px; }
-      .project-grid, .credentials-grid { grid-template-columns: 1fr; }
-      .project { min-height: 0; }
-      .skills { padding-bottom: 65px; }
-      .skill-line { grid-template-columns: 1fr; gap: 6px; }
-      .credentials-grid { gap: 34px; }
-      .contact .wrap { grid-template-columns: 1fr; gap: 25px; }
-      footer .wrap { flex-direction: column; gap: 7px; }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 4px 10px;
+      border: 1px solid var(--line-strong);
+      background: var(--paper-elevated);
+      font: 500 11px/1.2 var(--mono);
+      color: var(--green);
+      border-radius: 999px;
     }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.22);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.45; }
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--line-strong);
+      background: var(--paper-elevated);
+      color: var(--ink);
+      cursor: pointer;
+      font: 14px var(--mono);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .theme-toggle:hover {
+      border-color: var(--orange);
+      transform: translateY(-1px);
+    }
+    .nav-cta {
+      padding: 8px 14px;
+      border: 1px solid var(--green);
+      background: var(--green);
+      color: #fff !important;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .nav-cta:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero { padding: 72px 0 64px; overflow: hidden; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(290px, 0.75fr);
+      gap: 64px;
+      align-items: center;
+    }
+    .kicker, .section-kicker {
+      color: var(--green);
+      font: 500 12px/1.4 var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .kicker::before {
+      content: "";
+      width: 28px;
+      height: 1.5px;
+      background: var(--orange);
+    }
+    h1 {
+      max-width: 740px;
+      margin: 0 0 20px;
+      font: 500 clamp(44px, 6.2vw, 76px)/1.02 var(--serif);
+      letter-spacing: -0.015em;
+    }
+    h1 em {
+      color: var(--green);
+      font-style: italic;
+      font-weight: 400;
+    }
+    .hero-copy {
+      max-width: 640px;
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 17.5px;
+      line-height: 1.65;
+    }
+    .hero-copy strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .target-roles {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 28px;
+      padding: 12px 14px;
+      border-left: 3px solid var(--orange);
+      background: var(--paper-elevated);
+      border-top: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .target-roles-label {
+      font: 500 11px/1 var(--mono);
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-right: 4px;
+    }
+    .role-chip {
+      padding: 3px 9px;
+      background: var(--green-light);
+      color: var(--green);
+      font: 500 11.5px/1.3 var(--mono);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+    }
+    .button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 10px 18px;
+      border: 1px solid var(--line-strong);
+      background: var(--paper-elevated);
+      color: var(--ink);
+      font: 600 13.5px/1 var(--sans);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .button:hover {
+      transform: translateY(-2px);
+      border-color: var(--green);
+      color: var(--green);
+      box-shadow: var(--shadow);
+    }
+    .button.solid {
+      background: var(--green);
+      border-color: var(--green);
+      color: #fff;
+    }
+    .button.solid:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: #fff;
+    }
+    .button.accent {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+    .button.accent:hover {
+      background: var(--orange);
+      color: #fff;
+    }
+
+    /* Portrait Card */
+    .portrait-card {
+      position: relative;
+      width: min(100%, 360px);
+      justify-self: center;
+    }
+    .portrait-frame {
+      position: relative;
+      padding: 0 16px 16px 0;
+    }
+    .portrait-frame::before {
+      position: absolute;
+      content: "";
+      inset: 18px 0 0 18px;
+      background: var(--orange);
+      z-index: 0;
+    }
+    .portrait-frame img {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      max-width: 310px;
+      height: auto;
+      margin-inline: auto;
+      border: 1px solid var(--line-strong);
+      filter: saturate(0.88) contrast(1.02);
+      background: var(--paper-alt);
+    }
+    .portrait-badge {
+      position: absolute;
+      z-index: 2;
+      right: -8px;
+      bottom: 26px;
+      padding: 10px 14px;
+      background: var(--paper-elevated);
+      border: 1px solid var(--line-strong);
+      box-shadow: var(--shadow);
+      font: 500 11.5px/1.4 var(--mono);
+    }
+    .portrait-badge strong {
+      display: block;
+      color: var(--green);
+      font-weight: 500;
+    }
+    .quick-profile-links {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--line);
+      background: var(--paper-elevated);
+    }
+    .quick-profile-links a {
+      padding: 10px 8px;
+      text-align: center;
+      font: 500 11.5px/1.2 var(--mono);
+      text-decoration: none;
+      border-right: 1px solid var(--line);
+      color: var(--muted);
+    }
+    .quick-profile-links a:last-child { border-right: 0; }
+    .quick-profile-links a:hover {
+      background: var(--green-light);
+      color: var(--green);
+    }
+
+    /* Impact Metrics Strip */
+    .metrics-strip {
+      border-block: 1px solid var(--line);
+      background: var(--paper-alt);
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .metric-cell {
+      padding: 24px 24px;
+      border-right: 1px solid var(--line);
+    }
+    .metric-cell:first-child { padding-left: 0; }
+    .metric-cell:last-child { border-right: 0; padding-right: 0; }
+    .metric-value {
+      display: block;
+      margin-bottom: 4px;
+      font: 600 clamp(26px, 3vw, 34px)/1.1 var(--serif);
+      color: var(--green);
+    }
+    .metric-title {
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 3px;
+      color: var(--ink);
+    }
+    .metric-desc {
+      display: block;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    /* Section Base */
+    section { padding: 84px 0; }
+    .section-heading {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 44px;
+    }
+    .section-kicker { padding-top: 8px; }
+    h2 {
+      margin: 0;
+      font: 500 clamp(32px, 4vw, 48px)/1.08 var(--serif);
+      letter-spacing: -0.01em;
+    }
+    .section-lead {
+      max-width: 680px;
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 16.5px;
+    }
+
+    /* Recruiter Role-Fit Matrix */
+    .recruiter-box {
+      margin-bottom: 56px;
+      border: 1px solid var(--line-strong);
+      background: var(--paper-elevated);
+      box-shadow: var(--shadow);
+    }
+    .recruiter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper-alt);
+    }
+    .recruiter-tab {
+      flex: 1 1 auto;
+      padding: 14px 18px;
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      font: 600 13px/1.3 var(--sans);
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.18s ease;
+    }
+    .recruiter-tab:last-child { border-right: 0; }
+    .recruiter-tab span {
+      display: block;
+      font: 400 11px/1.2 var(--mono);
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .recruiter-tab:hover {
+      color: var(--ink);
+      background: var(--paper-elevated);
+    }
+    .recruiter-tab.active {
+      background: var(--paper-elevated);
+      color: var(--green);
+      box-shadow: inset 0 -3px 0 var(--orange);
+    }
+    .recruiter-tab.active span { color: var(--orange); }
+    .recruiter-panel {
+      display: none;
+      padding: 28px 30px;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: start;
+    }
+    .recruiter-panel.active { display: grid; }
+    .recruiter-panel h3 {
+      margin: 0 0 10px;
+      font: 500 26px/1.2 var(--serif);
+    }
+    .recruiter-panel p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    .proof-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--ink-soft);
+      font-size: 14.5px;
+    }
+    .proof-list li { margin-bottom: 8px; }
+    .proof-card {
+      padding: 20px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .proof-card-title {
+      font: 500 11px/1.2 var(--mono);
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+    .proof-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .proof-tag {
+      padding: 4px 9px;
+      border: 1px solid var(--line-strong);
+      background: var(--paper-elevated);
+      font: 500 11.5px/1.2 var(--mono);
+      color: var(--green);
+    }
+
+    /* About & Details */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 64px;
+    }
+    .about-copy p {
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+    .about-copy strong { color: var(--ink); }
+    .details {
+      border-top: 1px solid var(--line);
+      margin: 0;
+    }
+    .detail {
+      display: grid;
+      grid-template-columns: 128px 1fr;
+      gap: 16px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+    .detail dt {
+      color: var(--muted);
+      font: 500 12px/1.5 var(--mono);
+      text-transform: uppercase;
+    }
+    .detail dd {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    /* Experience & Education Section */
+    .work {
+      background: var(--paper-alt);
+      border-block: 1px solid var(--line);
+    }
+    .timeline-block + .timeline-block {
+      margin-top: 64px;
+    }
+    .sub-kicker {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 4px 10px;
+      background: var(--green);
+      color: #fff;
+      font: 500 11px/1.2 var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .work-list {
+      border-top: 1px solid var(--line-strong);
+    }
+    .work-item {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 36px;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--line-strong);
+    }
+    .work-meta {
+      font: 500 12px/1.65 var(--mono);
+      color: var(--muted);
+    }
+    .work-badge {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 3px 8px;
+      border: 1px solid var(--line-strong);
+      background: var(--paper-elevated);
+      color: var(--green);
+      font: 500 11px/1.2 var(--mono);
+    }
+    .work-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .work-item h3 {
+      margin: 0;
+      font: 500 25px/1.25 var(--serif);
+    }
+    .work-place {
+      color: var(--green);
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .work-item ul {
+      margin: 14px 0 16px;
+      padding-left: 19px;
+      color: var(--ink-soft);
+      font-size: 15px;
+    }
+    .work-item li {
+      padding: 4px 0;
+    }
+    .work-item li strong {
+      color: var(--ink);
+    }
+    .work-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .mini-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      border: 1px solid var(--line-strong);
+      background: var(--paper-elevated);
+      font: 500 11.5px/1.2 var(--mono);
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .mini-link:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    /* Projects Section */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .filter-btn {
+      padding: 8px 14px;
+      border: 1px solid var(--line-strong);
+      background: var(--paper-elevated);
+      color: var(--muted);
+      font: 500 12px/1.2 var(--mono);
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .filter-btn:hover {
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+    .filter-btn.active {
+      background: var(--green);
+      border-color: var(--green);
+      color: #fff;
+    }
+    .project-count {
+      font: 500 12px/1.2 var(--mono);
+      color: var(--muted);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--line-strong);
+      border-left: 1px solid var(--line-strong);
+    }
+    .project {
+      padding: 30px 30px;
+      border-right: 1px solid var(--line-strong);
+      border-bottom: 1px solid var(--line-strong);
+      background: var(--paper-elevated);
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.2s ease;
+    }
+    .project:hover {
+      background: var(--paper);
+    }
+    .project.hidden {
+      display: none;
+    }
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .project-number {
+      color: var(--orange);
+      font: 500 11.5px/1 var(--mono);
+      text-transform: uppercase;
+    }
+    .project-metric {
+      padding: 4px 9px;
+      background: var(--green-light);
+      color: var(--green);
+      font: 500 11px/1.2 var(--mono);
+    }
+    .project h3 {
+      margin: 0 0 10px;
+      font: 500 24px/1.24 var(--serif);
+    }
+    .project p {
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+    .project-highlights {
+      margin: 0 0 20px;
+      padding-left: 17px;
+      color: var(--ink-soft);
+      font-size: 13.5px;
+    }
+    .project-highlights li {
+      margin-bottom: 5px;
+    }
+    .project-footer {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px dashed var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .tag {
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--green);
+      font: 500 11px/1.2 var(--mono);
+    }
+    .project-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .project-link {
+      font: 500 12px/1 var(--mono);
+      color: var(--ink);
+      text-decoration: none;
+      padding: 6px 10px;
+      border: 1px solid var(--line-strong);
+      background: var(--paper);
+      white-space: nowrap;
+    }
+    .project-link:hover {
+      background: var(--green);
+      border-color: var(--green);
+      color: #fff;
+    }
+
+    /* Skills / Toolkit Matrix */
+    .skills {
+      padding-top: 0;
+    }
+    .skills-matrix {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .skill-card {
+      padding: 26px 28px;
+      border: 1px solid var(--line-strong);
+      background: var(--paper-elevated);
+    }
+    .skill-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .skill-card h3 {
+      margin: 0;
+      font: 500 22px/1.2 var(--serif);
+    }
+    .skill-card-code {
+      font: 500 11px/1 var(--mono);
+      color: var(--orange);
+    }
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill-pill {
+      padding: 5px 11px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      font: 500 12.5px/1.3 var(--sans);
+      color: var(--ink-soft);
+    }
+    .skill-pill.core {
+      border-color: var(--green);
+      background: var(--green-light);
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    /* Credentials & Research */
+    .credentials {
+      background: #1a4736;
+      color: #f4f1ea;
+    }
+    .credentials .section-kicker { color: #f29d7e; }
+    .credentials .section-lead { color: #c7d6ce; }
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 56px;
+    }
+    .credential-group h3 {
+      margin: 0 0 20px;
+      font: 500 26px/1.2 var(--serif);
+      color: #fff;
+    }
+    .pub-card {
+      padding: 24px;
+      border: 1px solid rgba(244, 241, 234, 0.24);
+      background: rgba(255, 255, 255, 0.04);
+      margin-bottom: 20px;
+    }
+    .pub-venue {
+      font: 500 11.5px/1.4 var(--mono);
+      color: #f29d7e;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .pub-card h4 {
+      font: 500 21px/1.3 var(--serif);
+      margin: 0 0 10px;
+      color: #fff;
+    }
+    .pub-card p {
+      font-size: 14px;
+      color: #d2dfd8;
+      margin-bottom: 16px;
+    }
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pub-btn {
+      padding: 7px 12px;
+      border: 1px solid rgba(244, 241, 234, 0.4);
+      color: #fff;
+      font: 500 11.5px/1.2 var(--mono);
+      text-decoration: none;
+    }
+    .pub-btn:hover {
+      background: #f29d7e;
+      border-color: #f29d7e;
+      color: #17211d;
+    }
+    .credential {
+      padding: 15px 0;
+      border-top: 1px solid rgba(244, 241, 234, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+    .credential:last-child {
+      border-bottom: 1px solid rgba(244, 241, 234, 0.2);
+    }
+    .credential strong {
+      display: block;
+      font-size: 15px;
+      color: #fff;
+    }
+    .credential span {
+      color: #bdd0c5;
+      font-size: 13px;
+    }
+    .credential-date {
+      font: 500 11.5px/1 var(--mono);
+      color: #f29d7e;
+      white-space: nowrap;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 84px 0 78px;
+      background: var(--orange);
+      color: #17211d;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .contact .section-kicker { color: #3c1f17; }
+    .contact h2 {
+      max-width: 650px;
+      margin: 12px 0 14px;
+      font-size: clamp(38px, 5.2vw, 62px);
+      color: #17211d;
+    }
+    .contact p {
+      max-width: 560px;
+      margin: 0 0 22px;
+      color: #3b221a;
+      font-size: 16.5px;
+    }
+    .contact-card {
+      padding: 28px;
+      background: #f4f1ea;
+      color: #17211d;
+      border: 1px solid #17211d;
+      box-shadow: 8px 8px 0 #17211d;
+    }
+    .contact-card h3 {
+      font: 500 22px/1.2 var(--serif);
+      margin: 0 0 6px;
+    }
+    .contact-card p {
+      font-size: 13.5px;
+      color: #58665f;
+      margin-bottom: 18px;
+    }
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid #d3d7ce;
+      background: #faf8f4;
+      font: 500 13px/1.3 var(--mono);
+    }
+    .contact-row a {
+      color: #17211d;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-row a:hover { color: #df5b35; }
+    .copy-btn {
+      padding: 5px 10px;
+      border: 1px solid #17211d;
+      background: #17211d;
+      color: #fff;
+      font: 500 11px/1 var(--mono);
+      cursor: pointer;
+    }
+    .copy-btn:hover {
+      background: #1e5641;
+      border-color: #1e5641;
+    }
+
+    footer {
+      padding: 24px 0;
+      background: #121916;
+      color: #b7c4bd;
+      font-size: 13px;
+    }
+    footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    footer a { color: #d5e0da; text-decoration: none; }
+    footer a:hover { color: var(--orange); }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .reveal { animation: rise 0.65s both; }
+    .delay { animation-delay: 0.12s; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .about-grid,
+      .recruiter-panel.active,
+      .credentials-grid,
+      .contact-grid,
+      .skills-matrix,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .metric-cell:nth-child(2) { border-right: 0; }
+      .metric-cell:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .metric-cell:nth-child(3) { padding-left: 0; }
+      .section-heading {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .work-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .wrap { width: min(var(--page), calc(100% - 32px)); }
+      .status-pill { display: none; }
+      .nav-links li:nth-child(1),
+      .nav-links li:nth-child(5) { display: none; }
+      .nav-links { gap: 14px; }
+      .hero { padding: 48px 0 44px; }
+      .metrics-grid { grid-template-columns: 1fr; }
+      .metric-cell {
+        padding: 16px 0 !important;
+        border-right: 0 !important;
+        border-bottom: 1px solid var(--line);
+      }
+      .metric-cell:last-child { border-bottom: 0; }
+      section { padding: 60px 0; }
+      .recruiter-tabs { flex-direction: column; }
+      .recruiter-tab { border-right: 0; border-bottom: 1px solid var(--line); }
+      .project { padding: 22px 20px; }
+      .detail { grid-template-columns: 1fr; gap: 4px; }
+    }
+
+    @media print {
+      .topbar, .filter-bar, .theme-toggle, .copy-btn { display: none !important; }
+      body { background: #fff; color: #000; }
+      section { padding: 28px 0; }
+      .project.hidden { display: flex !important; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <nav class="nav wrap" aria-label="Main navigation">
-      <a class="wordmark" href="#home">Atharva<span>.</span></a>
+      <div class="brand-group">
+        <a class="wordmark" href="#home">Atharva Dhorje<span>.</span></a>
+        <div class="status-pill" title="Actively interviewing for AI, ML, and Data roles">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open to Internships &amp; Roles
+        </div>
+      </div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
+        <li><a href="#role-fit">Role Fit</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a class="nav-cta" href="#contact">Contact ↗</a></li>
+        <li><a href="#projects">Projects (10)</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#research">Research &amp; Certs</a></li>
       </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark or light theme" title="Switch theme">◐</button>
+        <a class="nav-cta" href="#contact">Hire / Contact ↗</a>
+      </div>
     </nav>
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div class="reveal">
-          <div class="kicker">AI · Machine Learning · Applied Research</div>
-          <h1>Curious by nature.<br><em>Building with intelligence.</em></h1>
-          <p class="hero-copy">I’m Atharva Dhorje, a computer engineer pursuing an <strong>MTech in AI/ML</strong>. I work on practical AI products, from language-model applications to data tools that make complex information easier to use.</p>
+          <div class="kicker">AI &amp; Machine Learning Engineer · M.Tech AI/ML @ SIT Pune</div>
+          <h1>Shipping grounded AI,<br><em>from retrieval to production.</em></h1>
+          <p class="hero-copy">
+            I’m <strong>Atharva Amit Dhorje</strong>, a Computer Engineer pursuing an <strong>M.Tech in Artificial Intelligence &amp; Machine Learning</strong> at Symbiosis Institute of Technology. I design and build <strong>citation-grounded RAG systems, multi-agent LLM workflows, explainable fraud &amp; review detection pipelines, and deep learning models</strong> backed by measurable benchmarks.
+          </p>
+          <div class="target-roles" aria-label="Target internship and job roles">
+            <span class="target-roles-label">Target Roles:</span>
+            <span class="role-chip">AI / GenAI Engineer</span>
+            <span class="role-chip">Machine Learning Engineer</span>
+            <span class="role-chip">NLP &amp; LLM Developer</span>
+            <span class="role-chip">Data Scientist / MLOps</span>
+          </div>
           <div class="actions">
-            <a class="button solid" href="#projects">Explore selected work <span aria-hidden="true">↘</span></a>
+            <a class="button solid" href="#projects">Explore 10 Verified Projects <span aria-hidden="true">↘</span></a>
+            <a class="button accent" href="#contact">Schedule Interview / Contact <span aria-hidden="true">↗</span></a>
+            <a class="button" href="https://github.com/AtharvaDhorje" target="_blank" rel="noopener noreferrer">GitHub (19 Repos) <span aria-hidden="true">↗</span></a>
             <a class="button" href="https://www.linkedin.com/in/atharvadhorje/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <div class="portrait reveal delay">
-          <img src="profile_pic.jpeg" alt="Portrait of Atharva Dhorje" width="302" height="346">
-          <div class="portrait-note">Pune, Maharashtra · India</div>
+
+        <div class="portrait-card reveal delay">
+          <div class="portrait-frame">
+            <img src="profile_pic.jpeg" alt="Portrait of Atharva Amit Dhorje" width="302" height="346">
+            <div class="portrait-badge">
+              <strong>Pune, Maharashtra · India</strong>
+              Relocation &amp; Remote Ready
+            </div>
+          </div>
+          <div class="quick-profile-links" aria-label="External verification profiles">
+            <a href="https://www.linkedin.com/in/atharvadhorje/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/AtharvaDhorje" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://scholar.google.com/citations?user=A6QY1aQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Scholar ↗</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="quick-facts" aria-label="At a glance">
-      <div class="wrap facts-grid">
-        <div class="fact"><strong>Generative AI</strong><span>LLMs, retrieval, and agent workflows</span></div>
-        <div class="fact"><strong>Computer Engineering</strong><span>Undergraduate degree, 2022–2025</span></div>
-        <div class="fact"><strong>AI/ML Postgraduate</strong><span>Symbiosis Institute of Technology, 2025–2027</span></div>
+    <!-- QUANTIFIED IMPACT STRIP -->
+    <div class="metrics-strip" aria-label="Quantified engineering highlights">
+      <div class="wrap metrics-grid">
+        <div class="metric-cell">
+          <span class="metric-value">6.36M+</span>
+          <span class="metric-title">Transactions Modeled</span>
+          <span class="metric-desc">98.6% precision ensemble fraud detection with SHAP/LIME &amp; smart-contract auditability</span>
+        </div>
+        <div class="metric-cell">
+          <span class="metric-value">0.9453</span>
+          <span class="metric-title">ROC-AUC on 40.4K Reviews</span>
+          <span class="metric-desc">Leakage-safe NLP classification (87.02% accuracy, 86.93% F1) + MLOps drift pipeline</span>
+        </div>
+        <div class="metric-cell">
+          <span class="metric-value">+432%</span>
+          <span class="metric-title">Vision Detection Gain</span>
+          <span class="metric-desc">49.7M-parameter two-phase U-Net segmentation + conditional GAN localization</span>
+        </div>
+        <div class="metric-cell">
+          <span class="metric-value">2× OCI</span>
+          <span class="metric-title">Certified GenAI &amp; Cloud</span>
+          <span class="metric-desc">Oracle Certified GenAI Professional, Google Vertex AI Prompt Design &amp; Published Researcher</span>
+        </div>
       </div>
     </div>
 
-    <section id="about">
+    <!-- RECRUITER ROLE-FIT & ABOUT -->
+    <section id="role-fit">
       <div class="wrap">
-        <div class="section-heading"><div class="section-kicker">01 / About</div><div><h2>Turning technical ideas into useful things.</h2><p class="section-lead">A foundation in engineering, with a growing focus on language technologies and human-centered AI.</p></div></div>
-        <div class="about-grid">
+        <div class="section-heading">
+          <div class="section-kicker">01 / Hiring Match</div>
+          <div>
+            <h2>How I add value to engineering teams.</h2>
+            <p class="section-lead">Select the role your team is hiring for to inspect relevant production architectures, internship deliverables, and technical stack alignment.</p>
+          </div>
+        </div>
+
+        <div class="recruiter-box" role="region" aria-label="Role fit selector">
+          <div class="recruiter-tabs" role="tablist">
+            <button class="recruiter-tab active" role="tab" aria-selected="true" data-role="genai">
+              <span>TRACK 01</span>
+              GenAI, LLM &amp; RAG Engineering
+            </button>
+            <button class="recruiter-tab" role="tab" aria-selected="false" data-role="ml">
+              <span>TRACK 02</span>
+              Machine Learning &amp; FinTech AI
+            </button>
+            <button class="recruiter-tab" role="tab" aria-selected="false" data-role="dl">
+              <span>TRACK 03</span>
+              Deep Learning, NLP &amp; Vision
+            </button>
+            <button class="recruiter-tab" role="tab" aria-selected="false" data-role="data">
+              <span>TRACK 04</span>
+              Data Engineering, MLOps &amp; BI
+            </button>
+          </div>
+
+          <div class="recruiter-panel active" id="panel-genai" role="tabpanel">
+            <div>
+              <h3>Production RAG, Multi-Agent Workflows &amp; Guardrailed LLMs</h3>
+              <p>During my AI internships at <strong>UNLOX® (partnered with NASSCOM)</strong> and <strong>LaunchED Global</strong>, I focused on eliminating hallucinations and turning raw unstructured documents into reliable, citation-backed user products.</p>
+              <ul class="proof-list">
+                <li><strong>Two-Stage Retrieval &amp; Re-ranking:</strong> Built PDF RAG pipelines combining <code>sentence-transformers/all-MiniLM-L6-v2</code>, FAISS vector indices, and Cross-Encoder re-rankers with Gemini 2.5 Flash.</li>
+                <li><strong>Agentic Decomposition:</strong> Engineered specialized Budget, Retrieval, and Itinerary agents with Tavily Web RAG and FLAN-T5/OpenAI failover, cutting manual planning effort by ~70%.</li>
+                <li><strong>Structured LLM Outputs:</strong> Built automated PDF/DOCX resume parsers and Gemini JSON skill extractors covering 10+ job roles with 4-week learning roadmaps.</li>
+              </ul>
+            </div>
+            <div class="proof-card">
+              <div class="proof-card-title">Verified Stack &amp; Credentials</div>
+              <div class="proof-tags">
+                <span class="proof-tag">LangChain</span>
+                <span class="proof-tag">FAISS</span>
+                <span class="proof-tag">Gemini 2.5 Flash</span>
+                <span class="proof-tag">Cross-Encoder Reranking</span>
+                <span class="proof-tag">Sentence Transformers</span>
+                <span class="proof-tag">FLAN-T5</span>
+                <span class="proof-tag">Tavily Web RAG</span>
+                <span class="proof-tag">Vertex AI</span>
+                <span class="proof-tag">Streamlit</span>
+              </div>
+              <a class="button solid" href="#projects" onclick="filterProjects('genai')">View GenAI &amp; RAG Projects ↘</a>
+            </div>
+          </div>
+
+          <div class="recruiter-panel" id="panel-ml" role="tabpanel">
+            <div>
+              <h3>Leakage-Safe Classification, Imbalanced Fraud &amp; Explainable AI (XAI)</h3>
+              <p>I design machine learning systems that hold up under strict auditing—prioritizing split-first preprocessing, precision-recall trade-offs on 0.13% minority classes, and human-interpretable SHAP/LIME explanations.</p>
+              <ul class="proof-list">
+                <li><strong>E-Commerce Trust &amp; Safety:</strong> Engineered a 40,432-review fake review detector achieving <strong>87.02% accuracy, 86.93% F1, and 0.9453 ROC-AUC</strong> with rating-tier fairness audits.</li>
+                <li><strong>High-Scale FinTech Ensembles:</strong> Modeled 6.36M PaySim transactions with XGBoost, CatBoost, Random Forest, and Soft Voting ensembles (<strong>98.6% precision, 0.829 F1</strong>).</li>
+                <li><strong>Tamper-Proof Auditability:</strong> Integrated off-chain ML inference with SHA-256 hashing and Solidity smart contracts on Ethereum/Ganache.</li>
+              </ul>
+            </div>
+            <div class="proof-card">
+              <div class="proof-card-title">Verified Stack &amp; Credentials</div>
+              <div class="proof-tags">
+                <span class="proof-tag">Scikit-learn</span>
+                <span class="proof-tag">XGBoost</span>
+                <span class="proof-tag">CatBoost</span>
+                <span class="proof-tag">Gradient Boosting</span>
+                <span class="proof-tag">SHAP &amp; LIME</span>
+                <span class="proof-tag">PyOD</span>
+                <span class="proof-tag">FastAPI / Uvicorn</span>
+                <span class="proof-tag">Solidity / Web3.py</span>
+              </div>
+              <a class="button solid" href="#projects" onclick="filterProjects('ml')">View ML &amp; FinTech Projects ↘</a>
+            </div>
+          </div>
+
+          <div class="recruiter-panel" id="panel-dl" role="tabpanel">
+            <div>
+              <h3>Transformer Architectures, Semantic Grading &amp; Multi-Stage Vision</h3>
+              <p>My M.Tech research and engineering work spans custom PyTorch architectures for semantic text comparison, multilingual translation, and satellite image segmentation.</p>
+              <ul class="proof-list">
+                <li><strong>Siamese BERT Grading Engine:</strong> Built a dual-encoder <code>bert-base-uncased</code> architecture with attention-masked mean pooling and cosine similarity for automated short-answer grading (85% accuracy, 0.84 F1).</li>
+                <li><strong>U-Net + cGAN Satellite Vision:</strong> Combined a 31M-parameter U-Net (48-channel temporal input) with a 16M-parameter conditional GAN to boost urban tree localization by <strong>+432%</strong> (449 vs. 80 trees/image).</li>
+                <li><strong>8-Model NLP Benchmarking:</strong> Evaluated RoBERTa, LSTM, CNN, SVM, and Logistic Regression across 25,000 IMDB reviews and built Flask topic-aware news translation tools.</li>
+              </ul>
+            </div>
+            <div class="proof-card">
+              <div class="proof-card-title">Verified Stack &amp; Credentials</div>
+              <div class="proof-tags">
+                <span class="proof-tag">PyTorch</span>
+                <span class="proof-tag">Hugging Face Transformers</span>
+                <span class="proof-tag">Siamese BERT</span>
+                <span class="proof-tag">RoBERTa</span>
+                <span class="proof-tag">U-Net &amp; cGAN</span>
+                <span class="proof-tag">LSTM / CNN</span>
+                <span class="proof-tag">NLTK &amp; VADER</span>
+                <span class="proof-tag">Flask</span>
+              </div>
+              <a class="button solid" href="#projects" onclick="filterProjects('dl')">View Deep Learning &amp; NLP Projects ↘</a>
+            </div>
+          </div>
+
+          <div class="recruiter-panel" id="panel-data" role="tabpanel">
+            <div>
+              <h3>Deterministic Data QA, MLOps Pipelines &amp; Executive BI</h3>
+              <p>Great models fail without reproducible data pipelines and clear stakeholder reporting. I build automated quality-assurance engines, DVC/MLflow pipelines, and high-volume Power BI dashboards.</p>
+              <ul class="proof-list">
+                <li><strong>Sensor Telemetry QA Engine:</strong> Built a deterministic Python &amp; <code>pytest</code> auditing suite for an 8-station weather network (6 weeks of 10-min intervals, NMEA 0183 GPS checksums, barometric calibration, flatline/sentinel detection).</li>
+                <li><strong>End-to-End MLOps:</strong> Containerized ML inference with Docker, DVC data tracking, MLflow experiment logging, GitHub Actions CI/CD, and PSI/KS statistical drift monitors.</li>
+                <li><strong>Enterprise Insurance Analytics:</strong> Modeled 26K+ policies and 791K+ premium records in SQL and Power BI to track claims, renewals, and customer lifetime value.</li>
+              </ul>
+            </div>
+            <div class="proof-card">
+              <div class="proof-card-title">Verified Stack &amp; Credentials</div>
+              <div class="proof-tags">
+                <span class="proof-tag">Python 3.11 / 3.12</span>
+                <span class="proof-tag">SQL</span>
+                <span class="proof-tag">Power BI</span>
+                <span class="proof-tag">MLflow &amp; DVC</span>
+                <span class="proof-tag">Docker</span>
+                <span class="proof-tag">GitHub Actions CI/CD</span>
+                <span class="proof-tag">Pytest</span>
+                <span class="proof-tag">Pandas &amp; PyArrow</span>
+              </div>
+              <a class="button solid" href="#projects" onclick="filterProjects('data')">View Data &amp; MLOps Projects ↘</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-grid" id="about">
           <div class="about-copy">
-            <p>I’m an AI developer and computer engineer based in Pune, currently pursuing an MTech in AI/ML at Symbiosis Institute of Technology. My work spans <strong>generative AI, large language models, retrieval-augmented generation, and NLP</strong>.</p>
-            <p>I enjoy the full problem-solving loop: understanding the need, working with the data, building the system, and making the result approachable. Along the way, I’ve worked with Python, APIs, machine-learning workflows, and business intelligence.</p>
-            <p>My engineering background keeps me grounded in fundamentals like data structures, object-oriented programming, debugging, and integration.</p>
+            <p>I’m an AI/ML engineer and researcher based in Pune, currently pursuing my <strong>M.Tech in Artificial Intelligence &amp; Machine Learning at Symbiosis Institute of Technology (SIT)</strong> after completing my <strong>B.E. in Computer Engineering</strong> and a <strong>Diploma in Computer Engineering (92.67%)</strong>.</p>
+            <p>I care deeply about the complete engineering lifecycle: framing the problem, auditing data quality, training leakage-free models, grounding LLM outputs in verifiable citations, and packaging the system with clean APIs, automated tests, and intuitive user interfaces.</p>
+            <p>Whether working on e-commerce trust &amp; safety, fintech fraud prevention, document intelligence, or environmental telemetry, I focus on systems that are <strong>measurable, explainable, and ready for real users</strong>.</p>
           </div>
           <dl class="details">
-            <div class="detail"><dt>Based in</dt><dd>Pune, Maharashtra</dd></div>
-            <div class="detail"><dt>Studying</dt><dd>MTech, Artificial Intelligence / Machine Learning</dd></div>
-            <div class="detail"><dt>Interested in</dt><dd>Applied AI, GenAI, NLP, data products</dd></div>
-            <div class="detail"><dt>Elsewhere</dt><dd><a href="https://github.com/AtharvaDhorje" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://scholar.google.com/citations?user=A6QY1aQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></dd></div>
+            <div class="detail"><dt>Full Name</dt><dd>Atharva Amit Dhorje</dd></div>
+            <div class="detail"><dt>Location</dt><dd>Pune, Maharashtra, India (Open to Relocate / Remote)</dd></div>
+            <div class="detail"><dt>Current Degree</dt><dd>M.Tech in AI &amp; ML · Symbiosis Institute of Technology (2025–2027)</dd></div>
+            <div class="detail"><dt>Undergrad</dt><dd>B.E. in Computer Engineering (2022–2025)</dd></div>
+            <div class="detail"><dt>Core Domains</dt><dd>GenAI &amp; RAG, NLP, FinTech Fraud ML, Computer Vision, MLOps</dd></div>
+            <div class="detail"><dt>Direct Contact</dt><dd><a href="mailto:atharvadhorje14@gmail.com">atharvadhorje14@gmail.com</a> · <a href="tel:+917757901159">+91 7757901159</a></dd></div>
           </dl>
         </div>
       </div>
     </section>
 
+    <!-- EXPERIENCE & EDUCATION -->
     <section class="work" id="experience">
       <div class="wrap">
-        <div class="section-heading"><div class="section-kicker">02 / Experience</div><div><h2>Learning by building.</h2><p class="section-lead">Internship experience across AI applications, NLP, and retrieval workflows.</p></div></div>
-        <div class="work-list">
-          <article class="work-item">
-            <div class="work-date">JUN 2026 — AUG 2026<br>REMOTE</div>
-            <div><h3>Artificial Intelligence Intern</h3><div class="work-place">UNLOX®</div><ul><li>Built an AI resume analyzer with Python, NLP, Gemini, and Streamlit, covering 10+ job roles with recommendations and skill-development roadmaps.</li><li>Developed a citation-grounded RAG chatbot using FAISS, Sentence Transformers, cross-encoder reranking, LangChain, and Gemini 2.5 Flash.</li></ul></div>
-          </article>
-          <article class="work-item">
-            <div class="work-date">SEP 2025 — JAN 2026<br>REMOTE</div>
-            <div><h3>AI Intern</h3><div class="work-place">LaunchED Global</div><ul><li>Created a fake-review detection pipeline for 40,432 reviews, reporting 87.02% accuracy, 86.93% F1-score, and 0.9453 ROC-AUC.</li><li>Contributed to RAG, FAISS, and multi-agent AI workflows, including retrieval and API integration.</li></ul></div>
-          </article>
+        <div class="section-heading">
+          <div class="section-kicker">02 / Experience &amp; Education</div>
+          <div>
+            <h2>Proven in industry internships &amp; graduate research.</h2>
+            <p class="section-lead">Hands-on AI engineering internships delivering RAG systems, NLP analyzers, and high-accuracy classification pipelines, backed by a strong Computer Engineering foundation.</p>
+          </div>
+        </div>
+
+        <div class="timeline-block">
+          <span class="sub-kicker">Industry Experience</span>
+          <div class="work-list">
+            <article class="work-item">
+              <div class="work-meta">
+                JUN 2026 — AUG 2026<br>
+                REMOTE · INDIA<br>
+                <span class="work-badge">NASSCOM Partnered</span>
+              </div>
+              <div>
+                <div class="work-header">
+                  <h3>Artificial Intelligence Intern</h3>
+                  <div class="work-place">UNLOX®</div>
+                </div>
+                <ul>
+                  <li><strong>Citation-Grounded RAG Chatbot:</strong> Architected and deployed a two-stage Retrieval-Augmented Generation system using <strong>LangChain, FAISS, Sentence Transformers (<code>all-MiniLM-L6-v2</code>), Cross-Encoder Re-ranking, and Gemini 2.5 Flash</strong> in Streamlit, enforcing page-level source citations and strict refusal guardrails when context is absent.</li>
+                  <li><strong>AI Resume Analyzer &amp; Career Engine:</strong> Built an end-to-end NLP application using <strong>Python, Google Gemini API, PyPDF, python-docx, and Streamlit</strong> that extracts structured skills from PDF/DOCX resumes, computes role-fit scores across <strong>10+ tech job profiles</strong>, identifies missing competencies, and generates personalized 4-week learning roadmaps with downloadable JSON reports.</li>
+                </ul>
+                <div class="work-links">
+                  <a class="mini-link" href="https://github.com/AtharvaDhorje/Domain_Specific_ChatBot" target="_blank" rel="noopener noreferrer">RAG Chatbot Repo ↗</a>
+                  <a class="mini-link" href="https://github.com/AtharvaDhorje/AI-RESUME-ANALYZER-AND-JOB-RECOMMENDATION-SYSTEM" target="_blank" rel="noopener noreferrer">Resume Analyzer Repo ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="work-item">
+              <div class="work-meta">
+                SEP 2025 — JAN 2026<br>
+                REMOTE · INDIA<br>
+                <span class="work-badge">Applied AI &amp; ML</span>
+              </div>
+              <div>
+                <div class="work-header">
+                  <h3>AI Intern</h3>
+                  <div class="work-place">LaunchED Global</div>
+                </div>
+                <ul>
+                  <li><strong>Deceptive Review Detection Pipeline:</strong> Engineered a leakage-safe classification pipeline across <strong>40,432 e-commerce reviews</strong> combining train-only TF-IDF bigrams with 12 engineered linguistic and VADER sentiment features, achieving <strong>87.02% accuracy, 86.93% F1-score, and 0.9453 ROC-AUC</strong> using Gradient Boosting.</li>
+                  <li><strong>Explainability &amp; Multi-Agent Workflows:</strong> Implemented global/local <strong>SHAP explainability</strong> and 1-to-5 star fairness audits, and contributed to <strong>FAISS retrieval, RAG pipelines, and multi-agent AI workflows</strong> with external API integrations.</li>
+                </ul>
+                <div class="work-links">
+                  <a class="mini-link" href="https://github.com/AtharvaDhorje/AI-Based-Fake-Review-Detection-System-for-E-commerce-Platforms-With-Explainability-and-Ethical-Audit" target="_blank" rel="noopener noreferrer">Fake Review &amp; SHAP Repo ↗</a>
+                  <a class="mini-link" href="https://github.com/AtharvaDhorje/MLOPS_Project_Fake-Review-Detection-for-Hotels-Accomodations" target="_blank" rel="noopener noreferrer">MLOps Pipeline Repo ↗</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="timeline-block">
+          <span class="sub-kicker">Academic Background</span>
+          <div class="work-list">
+            <article class="work-item">
+              <div class="work-meta">
+                2025 — 2027<br>
+                PUNE, INDIA<br>
+                <span class="work-badge">Postgraduate</span>
+              </div>
+              <div>
+                <div class="work-header">
+                  <h3>M.Tech in Artificial Intelligence &amp; Machine Learning</h3>
+                  <div class="work-place">Symbiosis Institute of Technology (SIT), Symbiosis International University</div>
+                </div>
+                <ul>
+                  <li>Graduate specialization in <strong>Large Language Models, Agentic RAG Systems, Deep Learning (Siamese BERT, U-Net, cGAN), Explainable AI (SHAP/LIME), Ethical AI Audits, and MLOps</strong>.</li>
+                  <li>Lead author/developer on graduate capstones in <strong>Hybrid AI-Blockchain Financial Fraud Detection (6.36M transactions)</strong>, <strong>E-Commerce Review Auditing</strong>, and <strong>Multi-Temporal Satellite Segmentation</strong>.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="work-item">
+              <div class="work-meta">
+                2022 — 2025<br>
+                PUNE, INDIA<br>
+                <span class="work-badge">Undergraduate</span>
+              </div>
+              <div>
+                <div class="work-header">
+                  <h3>Bachelor of Engineering (B.E.) in Computer Engineering</h3>
+                  <div class="work-place">Zeal College of Engineering and Research (SPPU)</div>
+                </div>
+                <ul>
+                  <li>Core coursework in Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems (SQL), Operating Systems, Computer Networks, and Software Engineering.</li>
+                  <li>Co-developed <strong>Agro Finder</strong> (Flutter, Firebase, Figma) and co-authored peer-reviewed research published in IJSRST (April 2025) on optimizing seasonal agricultural workforce allocation.</li>
+                  <li>Previously completed <strong>Diploma in Computer Engineering</strong> at Zeal Polytechnic, Pune with <strong>92.67% distinction</strong>.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- SELECTED PROJECTS -->
     <section id="projects">
       <div class="wrap">
-        <div class="section-heading"><div class="section-kicker">03 / Selected Work</div><div><h2>Ideas, made tangible.</h2><p class="section-lead">A selection of AI and analytics projects, from personal planning to large-scale reporting.</p></div></div>
-        <div class="project-grid">
-          <article class="project"><div class="project-top"><span class="project-number">PROJECT 01</span><span aria-hidden="true">↗</span></div><h3>AI Travel Planner</h3><p>A personalized itinerary planner that considers destination, accommodation, activities, and budget. Prompt design and contextual preference analysis power day-by-day plans, with around 70% less manual planning effort.</p><div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Gemini API</span></div></article>
-          <article class="project"><div class="project-top"><span class="project-number">PROJECT 02</span><span aria-hidden="true">↗</span></div><h3>Context-Aware News Translation</h3><p>A multilingual NLP application combining transformer-based translation and topic-aware summarization to preserve context and reduce reading time.</p><div class="tags"><span class="tag">NLP</span><span class="tag">Transformers</span><span class="tag">Python</span></div></article>
-          <article class="project"><div class="project-top"><span class="project-number">PROJECT 03</span><span aria-hidden="true">↗</span></div><h3>Insurance Data Analytics</h3><p>Interactive Power BI reporting across 26K+ insurance policies and 791K+ premium records, tracking revenue, claims, renewals, and customer segments.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">Analytics</span></div></article>
-          <article class="project"><div class="project-top"><span class="project-number">PROJECT 04</span><span aria-hidden="true">↗</span></div><h3>Fake Review Detection</h3><p>A classification pipeline combining TF-IDF with linguistic and sentiment features to identify deceptive reviews, evaluated across 40,432 examples.</p><div class="tags"><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">Gradient Boosting</span></div></article>
+        <div class="section-heading">
+          <div class="section-kicker">03 / Engineering Portfolio</div>
+          <div>
+            <h2>10 end-to-end systems, open-source &amp; benchmarked.</h2>
+            <p class="section-lead">Every project below includes reproducible code, documented architecture, and evaluation metrics. Filter by domain or inspect the repositories directly on GitHub.</p>
+          </div>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-buttons" role="group" aria-label="Filter projects by category">
+            <button class="filter-btn active" type="button" data-filter="all">All Projects (10)</button>
+            <button class="filter-btn" type="button" data-filter="genai">GenAI, LLMs &amp; RAG (3)</button>
+            <button class="filter-btn" type="button" data-filter="ml">ML, Fraud &amp; MLOps (3)</button>
+            <button class="filter-btn" type="button" data-filter="dl">Deep Learning, NLP &amp; Vision (2)</button>
+            <button class="filter-btn" type="button" data-filter="data">Data QA, BI &amp; Apps (2)</button>
+          </div>
+          <div class="project-count" id="projectCount">Showing all 10 projects</div>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+          <!-- Project 1 -->
+          <article class="project" data-category="genai">
+            <div class="project-top">
+              <span class="project-number">01 · GENAI &amp; RAG</span>
+              <span class="project-metric">2-Stage Reranked RAG</span>
+            </div>
+            <h3>Citation-Grounded Domain-Specific RAG Chatbot</h3>
+            <p>Production-ready document intelligence assistant that answers complex queries strictly from user-uploaded PDFs while citing exact source documents and page numbers.</p>
+            <ul class="project-highlights">
+              <li>Implemented two-stage retrieval: dense vector search in <strong>FAISS</strong> (<code>all-MiniLM-L6-v2</code>) followed by <strong>Cross-Encoder re-ranking</strong> for high-precision context selection.</li>
+              <li>Integrated <strong>Gemini 2.5 Flash</strong> via LangChain with strict anti-hallucination prompt guardrails that safely refuse out-of-scope queries.</li>
+            </ul>
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">LangChain</span>
+                <span class="tag">FAISS</span>
+                <span class="tag">Cross-Encoder</span>
+                <span class="tag">Gemini 2.5 Flash</span>
+                <span class="tag">Streamlit</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/AtharvaDhorje/Domain_Specific_ChatBot" target="_blank" rel="noopener noreferrer">GitHub Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project" data-category="genai">
+            <div class="project-top">
+              <span class="project-number">02 · GENAI &amp; NLP</span>
+              <span class="project-metric">10+ Tech Roles · JSON Export</span>
+            </div>
+            <h3>AI Resume Analyzer &amp; Job Recommendation System</h3>
+            <p>End-to-end career readiness platform that parses PDF/DOCX resumes, evaluates skill alignment against target engineering roles, and generates actionable 4-week study roadmaps.</p>
+            <ul class="project-highlights">
+              <li>Built modular text normalization preserving technical tokens (<code>C++</code>, <code>C#</code>, <code>.NET</code>) paired with <strong>Gemini LLM</strong> structured skill extraction.</li>
+              <li>Computes role match percentages, recommends Top-3 best-fit roles, highlights skill gaps, and exports structured JSON evaluation reports.</li>
+            </ul>
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Google Gemini API</span>
+                <span class="tag">NLP</span>
+                <span class="tag">PyPDF / docx</span>
+                <span class="tag">Streamlit</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/AtharvaDhorje/AI-RESUME-ANALYZER-AND-JOB-RECOMMENDATION-SYSTEM" target="_blank" rel="noopener noreferrer">GitHub Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project" data-category="ml">
+            <div class="project-top">
+              <span class="project-number">03 · ML, XAI &amp; MLOPS</span>
+              <span class="project-metric">87.02% Acc · 0.9453 ROC-AUC</span>
+            </div>
+            <h3>Fake Review Detection with SHAP Explainability &amp; MLOps</h3>
+            <p>Leakage-safe deceptive review classification system evaluated across 40,432 e-commerce reviews, paired with an MLOps deployment pipeline for hospitality review monitoring.</p>
+            <ul class="project-highlights">
+              <li>Engineered 12 linguistic &amp; VADER sentiment features + train-only TF-IDF bigrams with <strong>Gradient Boosting</strong> (<strong>86.93% F1-score</strong>), global/local <strong>SHAP</strong> force plots, and 1–5 star fairness audits.</li>
+              <li>Built companion MLOps pipeline with <strong>DVC</strong>, <strong>MLflow</strong> tracking, <strong>PSI/KS drift monitoring</strong>, Docker, and GitHub Actions CI/CD.</li>
+            </ul>
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">Scikit-learn</span>
+                <span class="tag">SHAP</span>
+                <span class="tag">MLflow &amp; DVC</span>
+                <span class="tag">Docker</span>
+                <span class="tag">GitHub Actions</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/AtharvaDhorje/AI-Based-Fake-Review-Detection-System-for-E-commerce-Platforms-With-Explainability-and-Ethical-Audit" target="_blank" rel="noopener noreferrer">XAI Repo ↗</a>
+                <a class="project-link" href="https://github.com/AtharvaDhorje/MLOPS_Project_Fake-Review-Detection-for-Hotels-Accomodations" target="_blank" rel="noopener noreferrer">MLOps Repo ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project" data-category="ml">
+            <div class="project-top">
+              <span class="project-number">04 · FINTECH ML &amp; WEB3</span>
+              <span class="project-metric">6.36M Txns · 98.6% Precision</span>
+            </div>
+            <h3>Hybrid AI-Blockchain Financial Fraud Detection Framework</h3>
+            <p>Two-layer financial security architecture combining off-chain ensemble machine learning with on-chain Ethereum smart contracts for immutable fraud decision auditing.</p>
+            <ul class="project-highlights">
+              <li>Trained Logistic Regression, Random Forest, XGBoost, CatBoost, and a <strong>Soft Voting Ensemble</strong> on 6,362,620 PaySim transactions (0.13% fraud), achieving <strong>0.986 Precision and 0.829 F1</strong>.</li>
+              <li>Generated <strong>SHAP &amp; LIME</strong> explanations and hashed decisions (SHA-256) onto <strong>Solidity smart contracts</strong> (Ganache / Web3.py) plus a modular <strong>FastAPI</strong> inference package.</li>
+            </ul>
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">XGBoost &amp; CatBoost</span>
+                <span class="tag">SHAP &amp; LIME</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Solidity / Web3.py</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/AtharvaDhorje/AI-Blockchain-Based-Financial-Fraud-Detection-System" target="_blank" rel="noopener noreferrer">Blockchain AI ↗</a>
+                <a class="project-link" href="https://github.com/AtharvaDhorje/AI_in_Fintech_Harnessing-AI-for-Financial-Fraud-Detection-using-Ensemble-system" target="_blank" rel="noopener noreferrer">Ensemble API ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project" data-category="genai">
+            <div class="project-top">
+              <span class="project-number">05 · AGENTIC AI &amp; WEB RAG</span>
+              <span class="project-metric">~70% Less Planning Effort</span>
+            </div>
+            <h3>Multi-Agent AI Travel Planner with Prompt Guardrails</h3>
+            <p>Agentic itinerary orchestration system that synthesizes personalized, budget-constrained day-by-day travel plans using vector retrieval and multi-provider LLM failover.</p>
+            <ul class="project-highlights">
+              <li>Decomposed workflow into independent <strong>Budget Agent</strong>, <strong>FAISS Retrieval Agent</strong> (<code>all-MiniLM-L6-v2</code>), and <strong>Itinerary Agent</strong> with strict context-only guardrails.</li>
+              <li>Supports both Streamlit UI and CLI execution with <strong>FLAN-T5, Tavily Web RAG, OpenAI, and Anthropic</strong> provider failover.</li>
+            </ul>
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">Agentic AI</span>
+                <span class="tag">FAISS RAG</span>
+                <span class="tag">FLAN-T5 / LLMs</span>
+                <span class="tag">Tavily API</span>
+                <span class="tag">Streamlit</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/AtharvaDhorje/AI-Travel-Planner-using-LLM-Prompt-guardrails-and-agent-based-workflows" target="_blank" rel="noopener noreferrer">GitHub Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project" data-category="dl">
+            <div class="project-top">
+              <span class="project-number">06 · COMPUTER VISION &amp; DL</span>
+              <span class="project-metric">+432% Detection · 49.7M Params</span>
+            </div>
+            <h3>Two-Phase Urban Tree &amp; LULC Segmentation (U-Net + cGAN)</h3>
+            <p>Deep learning satellite imagery pipeline combining multi-temporal semantic segmentation with conditional GAN peak localization for high-density tree crown detection.</p>
+            <ul class="project-highlights">
+              <li><strong>Phase 1 (31M-param U-Net):</strong> Processes 48-channel tensors (12 months × 4 bands) into 3-class segmentation masks (Trees, Grass, Background).</li>
+              <li><strong>Phase 2 (16M-param cGAN + Hybrid Fusion):</strong> Generates Gaussian localization heatmaps, increasing detection from 80 to <strong>449 trees/image (+432%)</strong> at 0.2s/image GPU runtime.</li>
+            </ul>
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">U-Net (31M)</span>
+                <span class="tag">Conditional GAN</span>
+                <span class="tag">Satellite Vision</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/AtharvaDhorje/LULC-Classification-Framework-for-Forest-Desert-Regions-using-Deep-Learning-and-Segmentation" target="_blank" rel="noopener noreferrer">GitHub Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7 -->
+          <article class="project" data-category="dl">
+            <div class="project-top">
+              <span class="project-number">07 · DEEP LEARNING &amp; NLP</span>
+              <span class="project-metric">85% Acc · 0.84 F1-Score</span>
+            </div>
+            <h3>Siamese BERT Automated Answer Grading System</h3>
+            <p>Semantic evaluation framework trained on the ASAP-SAS dataset that grades student responses against reference answers for binary and multi-class partial-credit scales.</p>
+            <ul class="project-highlights">
+              <li>Built shared-weight <code>bert-base-uncased</code> dual encoders with attention-masked mean pooling and cosine similarity scoring.</li>
+              <li>Added a 3-layer classification head over concatenated embeddings, complete with threshold calibration, batch grading API, and confusion-matrix diagnostics.</li>
+            </ul>
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">Siamese BERT</span>
+                <span class="tag">Transformers</span>
+                <span class="tag">Semantic Similarity</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/AtharvaDhorje/Deep_Learing_Project_Siamese-BERT-Model-for-Answer-Grading" target="_blank" rel="noopener noreferrer">GitHub Code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 8 -->
+          <article class="project" data-category="data">
+            <div class="project-top">
+              <span class="project-number">08 · DATA ENGINEERING &amp; QA</span>
+              <span class="project-metric">8 Stations · 11 Physical Rules</span>
+            </div>
+            <h3>Ridgeline Weather Network — Sensor Data QA &amp; Health Engine</h3>
+            <p>Deterministic Python quality-assurance engine auditing 6 weeks of 10-minute telemetry, GPS sentences, and field maintenance logs across an 8-station climate monitoring network.</p>
+            <ul class="project-highlights">
+              <li>Implemented 11 physical &amp; statistical checks: NMEA 0183 XOR checksums, clock-jump resolution, elevation-reduced barometric steps, anemometer unit mismatches, and DS18B20 sentinel spikes.</li>
+              <li>Outputs audited <code>flags.csv</code> (<code>exclude</code>, <code>correct</code>, <code>keep</code>), a full synthetic <code>pytest</code> suite, and an executive printable HTML health report.</li>
+            </ul>
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">Python 3.12</span>
+                <span class="tag">Pandas &amp; PyArrow</span>
+                <span class="tag">Pytest</span>
+                <span class="tag">Time-Series QA</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/AtharvaDhorje/atharva-dhorje" target="_blank" rel="noopener noreferrer">GitHub Code ↗</a>
+                <a class="project-link" href="https://youtu.be/rLetZaVPhVQ" target="_blank" rel="noopener noreferrer">Video Demo ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 9 -->
+          <article class="project" data-category="ml">
+            <div class="project-top">
+              <span class="project-number">09 · MULTILINGUAL NLP</span>
+              <span class="project-metric">Flask App + 25K Review Benchmark</span>
+            </div>
+            <h3>Context-Aware News Translation &amp; 8-Model NLP Benchmark</h3>
+            <p>Multilingual NLP web application combining transformer-based translation and topic-conditioned summarization (politics, finance, sports, tech), paired with a 25K IMDB review benchmark.</p>
+            <ul class="project-highlights">
+              <li>Built a modular Flask application that extracts article text, classifies topical domain, preserves context across translation, and generates concise summaries.</li>
+              <li>Benchmarked 8 models across Classical ML (Logistic Regression 89.68%, SVM 89.44%), Deep Learning (LSTM, CNN), and Transformers (RoBERTa).</li>
+            </ul>
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">Flask</span>
+                <span class="tag">Transformers (RoBERTa)</span>
+                <span class="tag">LSTM / SVM</span>
+                <span class="tag">Python</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/AtharvaDhorje/NLPA-Project---Context-Aware-News-Translation-and-Topic-Based-Summarization" target="_blank" rel="noopener noreferrer">Translation App ↗</a>
+                <a class="project-link" href="https://github.com/AtharvaDhorje/NLP-Sentiment-Analysis---IMDB-Reviews-Classification" target="_blank" rel="noopener noreferrer">IMDB Benchmark ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 10 -->
+          <article class="project" data-category="data">
+            <div class="project-top">
+              <span class="project-number">10 · BUSINESS INTELLIGENCE</span>
+              <span class="project-metric">26K+ Policies · 791K+ Records</span>
+            </div>
+            <h3>Enterprise Insurance Data Analytics &amp; Agro Finder Platform</h3>
+            <p>High-volume SQL and Power BI decision-support suite analyzing 791,000+ insurance premium records, alongside full-stack mobile prototyping for seasonal workforce allocation.</p>
+            <ul class="project-highlights">
+              <li><strong>Insurance BI:</strong> Modeled 26K+ policies and 791K+ premium transactions in SQL &amp; Power BI to track revenue velocity, claim ratios, renewal funnels, and customer segments.</li>
+              <li><strong>Agro Finder &amp; WeatherZilla:</strong> Designed on-demand farm labor matching with <strong>Flutter, Firebase, and Figma</strong>, plus a real-time Python GUI weather suite (<a href="https://youtu.be/X_7xoDhB0gQ" target="_blank" rel="noopener noreferrer">Video ↗</a>).</li>
+            </ul>
+            <div class="project-footer">
+              <div class="tags">
+                <span class="tag">SQL</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Flutter &amp; Firebase</span>
+                <span class="tag">Figma</span>
+              </div>
+              <div class="project-links">
+                <a class="project-link" href="https://doi.org/10.32628/IJSRST251222693" target="_blank" rel="noopener noreferrer">Agro Finder Paper ↗</a>
+                <a class="project-link" href="https://github.com/AtharvaDhorje/WeatherZilla-Python-GUI-based-weather-application" target="_blank" rel="noopener noreferrer">WeatherZilla ↗</a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="skills" aria-label="Technical toolkit">
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section class="skills" id="skills" aria-label="Technical toolkit">
       <div class="wrap">
-        <div class="section-heading"><div class="section-kicker">04 / Toolkit</div><div><h2>Tools I reach for.</h2></div></div>
-        <div class="skill-line"><strong>Languages</strong><span>Python · SQL · C# · JavaScript</span></div>
-        <div class="skill-line"><strong>AI & machine learning</strong><span>LLMs · RAG · Agentic AI · NLP · Scikit-learn · TensorFlow · PyTorch · LangChain · Transformers</span></div>
-        <div class="skill-line"><strong>Building & data</strong><span>FastAPI · REST APIs · Gemini API · FAISS · Azure · Docker · MLflow · Streamlit · Power BI · Git</span></div>
+        <div class="section-heading">
+          <div class="section-kicker">04 / Technical Toolkit</div>
+          <div>
+            <h2>Skills verified across production repos &amp; certifications.</h2>
+            <p class="section-lead">Highlighted pills indicate primary technologies used across my internships at UNLOX® and LaunchED Global and my M.Tech research at SIT Pune.</p>
+          </div>
+        </div>
+
+        <div class="skills-matrix">
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <h3>Generative AI, LLMs &amp; Agentic Systems</h3>
+              <span class="skill-card-code">PILLAR 01</span>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill core">Large Language Models (LLMs)</span>
+              <span class="skill-pill core">Retrieval-Augmented Generation (RAG)</span>
+              <span class="skill-pill core">LangChain</span>
+              <span class="skill-pill core">FAISS Vector Search</span>
+              <span class="skill-pill core">Google Gemini API (2.5 Flash)</span>
+              <span class="skill-pill core">Agentic AI Workflows</span>
+              <span class="skill-pill">Cross-Encoder Reranking</span>
+              <span class="skill-pill">Sentence Transformers</span>
+              <span class="skill-pill">FLAN-T5</span>
+              <span class="skill-pill">Prompt Engineering &amp; Guardrails</span>
+              <span class="skill-pill">Google Cloud Vertex AI</span>
+              <span class="skill-pill">Tavily Web RAG</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <h3>Machine Learning, Deep Learning &amp; XAI</h3>
+              <span class="skill-card-code">PILLAR 02</span>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill core">PyTorch</span>
+              <span class="skill-pill core">Scikit-learn</span>
+              <span class="skill-pill core">Hugging Face Transformers</span>
+              <span class="skill-pill core">XGBoost &amp; CatBoost</span>
+              <span class="skill-pill core">Gradient Boosting &amp; Ensembles</span>
+              <span class="skill-pill core">SHAP &amp; LIME (Explainable AI)</span>
+              <span class="skill-pill">TensorFlow</span>
+              <span class="skill-pill">Siamese BERT &amp; RoBERTa</span>
+              <span class="skill-pill">U-Net &amp; Conditional GAN (cGAN)</span>
+              <span class="skill-pill">LSTM &amp; CNN</span>
+              <span class="skill-pill">Anomaly Detection (PyOD)</span>
+              <span class="skill-pill">Fairness &amp; Ethical AI Auditing</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <h3>Languages, Backend APIs &amp; MLOps</h3>
+              <span class="skill-card-code">PILLAR 03</span>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill core">Python (3.11 / 3.12)</span>
+              <span class="skill-pill core">SQL</span>
+              <span class="skill-pill core">FastAPI &amp; Uvicorn</span>
+              <span class="skill-pill core">Streamlit</span>
+              <span class="skill-pill core">Docker</span>
+              <span class="skill-pill core">MLflow &amp; DVC</span>
+              <span class="skill-pill">Flask</span>
+              <span class="skill-pill">REST APIs</span>
+              <span class="skill-pill">GitHub Actions (CI/CD)</span>
+              <span class="skill-pill">Drift Detection (PSI / KS Test)</span>
+              <span class="skill-pill">Pytest</span>
+              <span class="skill-pill">C#</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">Git &amp; GitHub</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-head">
+              <h3>NLP, Data Analytics, Cloud &amp; Web3</h3>
+              <span class="skill-card-code">PILLAR 04</span>
+            </div>
+            <div class="skill-pills">
+              <span class="skill-pill core">Natural Language Processing (NLP)</span>
+              <span class="skill-pill core">Power BI</span>
+              <span class="skill-pill core">Pandas, NumPy &amp; PyArrow</span>
+              <span class="skill-pill core">Oracle Cloud (OCI GenAI)</span>
+              <span class="skill-pill">Microsoft Azure</span>
+              <span class="skill-pill">TF-IDF, NLTK &amp; VADER</span>
+              <span class="skill-pill">Data Structures &amp; Algorithms</span>
+              <span class="skill-pill">Solidity, Ethereum &amp; Web3.py</span>
+              <span class="skill-pill">Flutter &amp; Firebase</span>
+              <span class="skill-pill">Figma UI/UX</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- RESEARCH PUBLICATIONS & CERTIFICATIONS -->
     <section class="credentials" id="research">
       <div class="wrap">
-        <div class="section-heading"><div class="section-kicker">05 / Research & Learning</div><div><h2>Research curiosity, backed by practice.</h2></div></div>
+        <div class="section-heading">
+          <div class="section-kicker">05 / Publications &amp; Credentials</div>
+          <div>
+            <h2>Peer-reviewed research &amp; industry certifications.</h2>
+            <p class="section-lead">Academic rigor paired with verified cloud and generative AI credentials from Oracle, Google Cloud, and HackerRank.</p>
+          </div>
+        </div>
+
         <div class="credentials-grid">
-          <div class="credential-group"><h3>Publication</h3><div class="credential"><strong>Optimizing Agricultural Labour: An Examination of On-Demand Workforce Solutions for Seasonal Demands</strong><span>International Journal of Scientific Research in Science and Technology · April 2025 · <a href="https://doi.org/10.32628/IJSRST251222693" target="_blank" rel="noopener noreferrer">DOI ↗</a></span></div></div>
-          <div class="credential-group"><h3>Certifications</h3><div class="credential"><strong>OCI 2025 Certified Generative AI Professional</strong><span>Oracle · October 2025</span></div><div class="credential"><strong>OCI 2025 Certified Foundations Associate</strong><span>Oracle · October 2025</span></div><div class="credential"><strong>Problem Solving (Intermediate)</strong><span>HackerRank · September 2025</span></div><div class="credential"><strong>Prompt Design in Vertex AI Skill Badge</strong><span>Google · May 2024</span></div></div>
+          <div class="credential-group">
+            <h3>Published Research</h3>
+            <div class="pub-card">
+              <div class="pub-venue">IJSRST · Vol. 12, Issue 2 · April 2025</div>
+              <h4>Optimizing Agricultural Labour: An Examination of On-Demand Workforce Solutions for Seasonal Demands</h4>
+              <p>Co-authored peer-reviewed study introducing <strong>Agro Finder</strong>, a mobile platform architected with Flutter, Firebase, and Figma to connect farmers with seasonal agricultural workers using real-time geospatial availability and skill matching.</p>
+              <div class="pub-links">
+                <a class="pub-btn" href="https://doi.org/10.32628/IJSRST251222693" target="_blank" rel="noopener noreferrer">Read Paper (DOI) ↗</a>
+                <a class="pub-btn" href="https://scholar.google.com/citations?user=A6QY1aQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar Profile ↗</a>
+              </div>
+            </div>
+            <div class="pub-card">
+              <div class="pub-venue">M.Tech Graduate Research · Symbiosis Institute of Technology</div>
+              <h4>Explainable &amp; Auditable AI Systems across E-Commerce and FinTech</h4>
+              <p>Ongoing postgraduate investigation into leakage-safe NLP pipelines, SHAP/LIME interpretability, demographic/rating fairness audits, and hybrid off-chain ML + on-chain smart contract verification.</p>
+            </div>
+          </div>
+
+          <div class="credential-group">
+            <h3>Licenses &amp; Certifications</h3>
+            <div class="credential">
+              <div>
+                <strong>Oracle Cloud Infrastructure (OCI) 2025 Certified Generative AI Professional</strong>
+                <span>Oracle · LLMs, RAG, Semantic Search &amp; OCI GenAI Service</span>
+              </div>
+              <span class="credential-date">OCT 2025</span>
+            </div>
+            <div class="credential">
+              <div>
+                <strong>Oracle Cloud Infrastructure (OCI) 2025 Certified Foundations Associate</strong>
+                <span>Oracle · Cloud Architecture, Security &amp; Core Infrastructure</span>
+              </div>
+              <span class="credential-date">OCT 2025</span>
+            </div>
+            <div class="credential">
+              <div>
+                <strong>Problem Solving (Intermediate) Certificate</strong>
+                <span>HackerRank · Data Structures, Algorithms &amp; Optimization</span>
+              </div>
+              <span class="credential-date">SEP 2025</span>
+            </div>
+            <div class="credential">
+              <div>
+                <strong>Prompt Design in Vertex AI Skill Badge</strong>
+                <span>Google Cloud · Multimodal Prompting &amp; Gemini on Vertex AI</span>
+              </div>
+              <span class="credential-date">MAY 2024</span>
+            </div>
+            <div class="credential">
+              <div>
+                <strong>Google IT Automation with Python &amp; CS50x Computer Science</strong>
+                <span>Google / Harvardx · Python Automation, Git &amp; Software Engineering</span>
+              </div>
+              <span class="credential-date">VERIFIED</span>
+            </div>
+            <div class="credential">
+              <div>
+                <strong>Market Research &amp; Competitive Analysis Executive Certificate</strong>
+                <span>Great Learning · Data-Driven Market &amp; Product Strategy</span>
+              </div>
+              <span class="credential-date">VERIFIED</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section class="contact" id="contact">
-      <div class="wrap"><div><div class="section-kicker">06 / Contact</div><h2>Have a thoughtful problem to solve?</h2><p>I’m open to conversations about AI engineering, collaborations, and practical applications of generative AI and data.</p></div><div class="actions contact-actions"><a class="button" href="mailto:atharvadhorje14@gmail.com">Email: atharvadhorje14@gmail.com <span aria-hidden="true">↗</span></a><a class="button" href="tel:+917757901159">Phone: 7757901159 <span aria-hidden="true">↗</span></a></div></div>
+      <div class="wrap contact-grid">
+        <div>
+          <div class="section-kicker">06 / Hire &amp; Collaborate</div>
+          <h2>Looking for an AI/ML intern or engineer who ships?</h2>
+          <p>I’m actively interviewing for <strong>AI Engineer, Machine Learning Engineer, GenAI/NLP Developer, and Data Science internships &amp; full-time roles</strong>. Reach out directly for my latest PDF resume, code walkthroughs, or technical interviews.</p>
+          <div class="actions">
+            <a class="button solid" href="mailto:atharvadhorje14@gmail.com?subject=Interview%20Opportunity%20%E2%80%94%20Atharva%20Dhorje">Email Atharva Directly ↗</a>
+            <a class="button" href="https://www.linkedin.com/in/atharvadhorje/" target="_blank" rel="noopener noreferrer" style="background:#17211d;color:#fff;border-color:#17211d;">Message on LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h3>Direct Recruiter Contact</h3>
+          <p>Fast response via email, phone, or LinkedIn.</p>
+          <div class="contact-list">
+            <div class="contact-row">
+              <a href="mailto:atharvadhorje14@gmail.com">atharvadhorje14@gmail.com</a>
+              <button class="copy-btn" type="button" data-copy="atharvadhorje14@gmail.com">Copy Email</button>
+            </div>
+            <div class="contact-row">
+              <a href="tel:+917757901159">+91 7757901159</a>
+              <button class="copy-btn" type="button" data-copy="+917757901159">Copy Phone</button>
+            </div>
+            <div class="contact-row">
+              <a href="https://www.linkedin.com/in/atharvadhorje/" target="_blank" rel="noopener noreferrer">linkedin.com/in/atharvadhorje</a>
+              <span>Profile ↗</span>
+            </div>
+            <div class="contact-row">
+              <a href="https://github.com/AtharvaDhorje" target="_blank" rel="noopener noreferrer">github.com/AtharvaDhorje</a>
+              <span>19 Repos ↗</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer><div class="wrap"><span>© <span id="year"></span> Atharva Dhorje</span><span><a href="https://www.linkedin.com/in/atharvadhorje/" target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a href="https://github.com/AtharvaDhorje" target="_blank" rel="noopener noreferrer">GitHub</a></span></div></footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year"></span> Atharva Amit Dhorje · Built for speed, clarity &amp; technical depth.</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/atharvadhorje/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/AtharvaDhorje" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=A6QY1aQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="mailto:atharvadhorje14@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Dynamic copyright year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Light / Dark theme toggle with localStorage persistence
+    const htmlEl = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem("atharva_theme");
+    if (savedTheme === "dark" || savedTheme === "light") {
+      htmlEl.setAttribute("data-theme", savedTheme);
+    }
+    themeToggle.addEventListener("click", () => {
+      const next = htmlEl.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      htmlEl.setAttribute("data-theme", next);
+      localStorage.setItem("atharva_theme", next);
+    });
+
+    // Role-Fit Interactive Switcher
+    const roleTabs = document.querySelectorAll(".recruiter-tab");
+    const rolePanels = document.querySelectorAll(".recruiter-panel");
+    roleTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const role = tab.getAttribute("data-role");
+        roleTabs.forEach((t) => {
+          t.classList.toggle("active", t === tab);
+          t.setAttribute("aria-selected", t === tab ? "true" : "false");
+        });
+        rolePanels.forEach((panel) => {
+          panel.classList.toggle("active", panel.id === "panel-" + role);
+        });
+      });
+    });
+
+    // Project Category Filtering
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const projects = document.querySelectorAll(".project");
+    const projectCount = document.getElementById("projectCount");
+
+    function filterProjects(category) {
+      filterBtns.forEach((btn) => {
+        btn.classList.toggle("active", btn.getAttribute("data-filter") === category);
+      });
+      let visible = 0;
+      projects.forEach((card) => {
+        const match = category === "all" || card.getAttribute("data-category") === category;
+        card.classList.toggle("hidden", !match);
+        if (match) visible++;
+      });
+      projectCount.textContent = category === "all"
+        ? `Showing all ${visible} projects`
+        : `Showing ${visible} filtered projects`;
+    }
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filterProjects(btn.getAttribute("data-filter"));
+      });
+    });
+
+    // One-click copy for recruiter email & phone
+    document.querySelectorAll(".copy-btn").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const value = btn.getAttribute("data-copy");
+        const original = btn.textContent;
+        try {
+          await navigator.clipboard.writeText(value);
+          btn.textContent = "Copied ✓";
+          setTimeout(() => { btn.textContent = original; }, 1800);
+        } catch {
+          btn.textContent = value;
+        }
+      });
+    });
+  </script>
 </body>
 </html>
